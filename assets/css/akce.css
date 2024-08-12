@@ -160,6 +160,10 @@ body {
 }
 
 section {
+  padding: 50px 0px;
+  padding-top: 0;
+}
+#upcoming-events{
   margin-top: 120px;
 }
 
@@ -679,99 +683,101 @@ header
   }
 }
 
-/* Akce Page Styles */
-.current-events, .past-events {
-  padding: 40px 0; /* Zmenšeno z 60px */
-}
-
-.current-events .current-event-item,
-.past-events .past-event-item {
+/**/
+/* Sekce pro karty akcí - zobrazení karet vedle sebe */
+.event-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background: #f9f9f9;
-  padding: 15px; /* Zmenšeno z 20px */
-  margin-bottom: 20px; /* Zmenšeno z 30px */
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Zajistí, že karty nebudou širší než rodič */
-  font-size: 0.9rem; /* Zmenšena velikost textu */
-}
-
-.current-events .current-event-item {
-  background: #ff511a;
-  color: #fff;
-}
-
-.past-events .past-event-item {
-  color: #212741;
-}
-
-.event-content {
-  flex: 1;
-  padding-right: 15px; /* Zmenšeno z 20px */
-  max-width: 55%; /* Zmenšeno z 60% */
-}
-
-.event-content h5 {
-  margin-bottom: 8px; /* Zmenšeno z 10px */
-  font-size: 1.1rem; /* Zmenšena velikost textu */
-}
-
-.event-content p {
-  font-size: 0.9rem; /* Zmenšena velikost textu */
-}
-
-.event-poster {
-  max-width: 35%; /* Zmenšeno z 40% */
-}
-
-.event-poster img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.pagination {
-  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Mezery mezi kartami */
   justify-content: center;
-  padding: 15px 0; /* Zmenšeno z 20px */
+}
+
+.event-card {
+  flex: 1 1 calc(33.33% - 20px); /* 3 karty na řádek s mezerami */
+  max-width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+}
+
+.event-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.pagination button {
-  width: 100px; /* Zmenšeno z 120px */
-  color: #fff;
-  padding: 8px 18px; /* Zmenšeno z 10px 20px */
-  margin: 0 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+.event-info h5 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.pagination button:hover {
+.event-info p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.orange-button a {
   background-color: #ff511a;
-  color: #fff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
 }
 
+.orange-button a:hover {
+  opacity: 0.9;
+}
+
+.pagination-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-buttons button {
+  background-color: #ff511a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 7rem;
+}
+
+.pagination-buttons button:hover {
+  background-color: #e04d1a;
+}
+
+/* Při menších obrazovkách upravit zobrazení na 2 karty na řádek */
+@media (max-width: 992px) {
+  .event-card {
+    flex: 1 1 calc(50% - 20px); /* 2 karty na řádek */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Při ještě menších obrazovkách upravit zobrazení na 1 kartu na řádek */
 @media (max-width: 768px) {
-  .past-event-item {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .event-content, .event-poster {
+  .event-card {
+    flex: 1 1 100%; /* 1 karta na řádek */
     max-width: 100%;
-    padding-right: 0;
-
-  }
-
-  .event-poster {
-    margin-top: 15px; /* Zmenšeno z 20px */
   }
 }
 
 
+  /**/
 
   
 

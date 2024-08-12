@@ -84,11 +84,31 @@
           </div>
         </div>
       </div>
+      <div class="event-card">
+        <img src="assets/images/Pippi.jpg" alt="Event Image">
+        <div class="event-info">
+          <h5>Název Akce 2</h5>
+          <p>Popis akce 2...</p>
+          <div class="orange-button">
+            <a href="#">Více informací</a>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="assets/images/Pippi.jpg" alt="Event Image">
+        <div class="event-info">
+          <h5>Název Akce 2</h5>
+          <p>Popis akce 2...</p>
+          <div class="orange-button">
+            <a href="#">Více informací</a>
+          </div>
+        </div>
+      </div>
       <!-- Další karty akcí -->
     </div>
     <div class="pagination-buttons">
-      <button id="prev-page">Předchozí</button>
-      <button id="next-page">Další</button>
+      <button id="upcoming-events-prev-page">Předchozí</button>
+      <button id="upcoming-events-next-page">Další</button>
     </div>
   </div>
 </section>
@@ -131,11 +151,21 @@
           </div>
         </div>
       </div>
+      <div class="event-card">
+        <img src="assets/images/Pippi.jpg" alt="Event Image">
+        <div class="event-info">
+          <h5>Název Akce 2</h5>
+          <p>Popis akce 2...</p>
+          <div class="orange-button">
+            <a href="#">Více informací</a>
+          </div>
+        </div>
+      </div>
       <!-- Další karty akce -->
     </div>
     <div class="pagination-buttons">
-      <button id="prev-page">Předchozí</button>
-      <button id="next-page">Další</button>
+      <button id="past-events-prev-page">Předchozí</button>
+      <button id="past-events-next-page">Další</button>
     </div>
   </div>
 </section>
@@ -165,37 +195,43 @@
 
 
   <script>
-    // Skript pro stránkování minulých akcí
-    const eventsPerPage = 3;
+document.addEventListener('DOMContentLoaded', () => {
+  const eventsPerPage = 3;
+
+  function setupPagination(sectionId) {
+    const container = document.getElementById(`${sectionId}-container`);
+    const events = container.querySelectorAll('.event-card');
+    const totalPages = Math.ceil(events.length / eventsPerPage);
     let currentPage = 1;
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const pastEventsContainer = document.getElementById('past-events-container');
-      const pastEvents = pastEventsContainer.querySelectorAll('.event-card');
-      const totalPages = Math.ceil(pastEvents.length / eventsPerPage);
+    function showPage(page) {
+      events.forEach((event, index) => {
+        event.style.display = (index >= (page - 1) * eventsPerPage && index < page * eventsPerPage) ? 'block' : 'none';
+      });
+    }
 
-      function showPage(page) {
-        pastEvents.forEach((event, index) => {
-          event.style.display = (index >= (page - 1) * eventsPerPage && index < page * eventsPerPage) ? 'block' : 'none';
-        });
+    document.getElementById(`${sectionId}-prev-page`).addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
       }
-
-      document.getElementById('prev-page').addEventListener('click', () => {
-        if (currentPage > 1) {
-          currentPage--;
-          showPage(currentPage);
-        }
-      });
-
-      document.getElementById('next-page').addEventListener('click', () => {
-        if (currentPage < totalPages) {
-          currentPage++;
-          showPage(currentPage);
-        }
-      });
-
-      showPage(currentPage);
     });
+
+    document.getElementById(`${sectionId}-next-page`).addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    showPage(currentPage);
+  }
+
+  // Nastavení paginace pro obě sekce
+  setupPagination('past-events');
+  setupPagination('upcoming-events');
+});
+
   </script>
 </body>
 

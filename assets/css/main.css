@@ -819,6 +819,7 @@ banner
     max-width: 100%; /* Maximální šířka karty */
     width: 100%;
     margin: 15px;
+    min-height: 380px;
   }
 
 .our-projects .project-card img {

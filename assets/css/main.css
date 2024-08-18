@@ -799,7 +799,7 @@ banner
 .our-projects .project-card {
     background: #f9f9f9;
     padding: 20px;
-    margin: 15px 0;
+    margin: 25px 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -1273,13 +1273,20 @@ body {
   }
 
   .our-projects .col-lg-4 {
-    width: 100%;
+    margin-right: 25px;
+    width: 90%;
     margin-bottom: 30px;
   }
 }
 
 /* Přizpůsobení pro mobilní telefony */
 @media screen and (max-width: 480px) {
+  .slide-inner .header-text {
+    text-align: center;
+    width: 80%;
+    margin-left: 8%;
+    margin-right: 10%;
+  }
   .header-area .logo {
     font-size: 24px;
   }

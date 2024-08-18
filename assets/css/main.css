@@ -1207,7 +1207,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 760px) {
   .header-area .main-nav .logo {
     line-height: 100px;
   }
@@ -1256,5 +1256,53 @@ body {
   }
   .testimonials .item {
     padding: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-area .main-nav ul.nav {
+    display: none;
+  }
+  .header-area .menu-trigger {
+    display: block;
+  }
+
+  .swiper-container .header-text {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .our-projects .col-lg-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Přizpůsobení pro mobilní telefony */
+@media screen and (max-width: 480px) {
+  .header-area .logo {
+    font-size: 24px;
+  }
+
+  .header-area .main-nav ul.nav {
+    display: none;
+  }
+
+  .our-projects .project-card {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .our-projects .project-card img {
+    margin: 0 auto;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .swiper-container .header-text {
+    font-size: 18px;
+    padding: 20px;
   }
 }

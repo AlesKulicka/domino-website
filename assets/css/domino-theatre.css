@@ -846,4 +846,64 @@ footer {
     color: #ff511a;
   }
 
+
+  /* Sekce Nabízíme */
+  .service-card {
+    border: 1px solid #ff511a;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+  }
   
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card .card-body {
+    padding: 20px;
+  }
+  
+  .service-card .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff511a;
+  }
+  
+  .service-card .card-text {
+    font-size: 14px;
+    color: #212741;
+  }
+
+  #domino-theater {
+    padding-top: 120px; 
+  }
+
+#akce {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#akce .section-heading {
+  margin-bottom: 30px;
+}
+
+#nabizime{
+  font-size: 25px;
+}
+
+#akce .btn-primary {
+  background-color: #ff511a;
+  border-color: #ff511a;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+#akce .btn-primary:hover {
+  background-color: #1a1f37;
+  border-color: #1a1f37;
+}

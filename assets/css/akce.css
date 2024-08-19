@@ -211,13 +211,12 @@ header
 }
 
 
+
 .header-area {
-  background-image: url(../images/header-bg.png);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  height: 110px;
+  height: 80px;
   top: 0;
   left: 0;
   right: 0;
@@ -234,17 +233,13 @@ header
 }
 
 .header-area .main-nav .logo {
-  line-height: 120px;
+  line-height: 80px;
   color: #fff;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   float: left;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .background-header .main-nav .logo {
@@ -262,13 +257,9 @@ header
 
 .header-area .main-nav .nav {
   float: right;
-  margin-top: 40px;
+  margin-top: 19.3px;
   margin-right: 0px;
   background-color: #212741;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
 }
@@ -403,10 +394,6 @@ header
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   position: relative;
   font-size: 12px;
   font-weight: 400;

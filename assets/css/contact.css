@@ -240,7 +240,7 @@ header
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  height: 85px;
+  height: 80px;
   top: 0;
   left: 0;
   right: 0;
@@ -265,15 +265,11 @@ header
   text-transform: uppercase;
   letter-spacing: 2px;
   float: left;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   margin-top: -0.45rem;
 }
 
 .background-header .main-nav .logo {
-  line-height: 80px;
+  line-height: 0px;
   width: 160px;
 }
 

@@ -907,3 +907,53 @@ footer {
   background-color: #1a1f37;
   border-color: #1a1f37;
 }
+
+#historie {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#historie .section-heading {
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.timeline-item {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 48%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.timeline-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #212741;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.d-none {
+  display: none !important;
+}
+
+#show-more-btn{
+  background-color: #ff511a;
+  border: none;
+}

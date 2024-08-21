@@ -855,6 +855,7 @@ footer {
     background-color: #f7f7f7;
     margin-bottom: 30px;
     transition: all 0.3s ease-in-out;
+    max-width: 1000px;
   }
   
   .service-card:hover {
@@ -876,10 +877,20 @@ footer {
     font-size: 14px;
     color: #212741;
   }
-
+  
   #domino-theater {
     padding-top: 120px; 
   }
+  
+  /* Nové styly pro centrování karet */
+  #domino-theater .row {
+    justify-content: center; /* Centrování karet */
+  }
+  
+  #domino-theater .col-lg-4 {
+    max-width: 400px; /* Nastavení maximální šířky pro lepší zarovnání */
+  }
+  
 
 #akce {
   padding-top: 60px;

@@ -898,6 +898,10 @@ banner
 }
 /* END ABOUT-US*/
 
+#header-text-color{
+  color: rgb(224, 224, 224);
+}
+
 /* 
 ---------------------------------------------
 testimonials

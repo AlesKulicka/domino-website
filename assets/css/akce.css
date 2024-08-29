@@ -1114,3 +1114,41 @@ dialog button {
 dialog button:hover {
   background-color: #e04a17;
 }
+
+/* Ujistěte se, že html a body mají 100% výšku */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Udržet existující styl footera */
+footer {
+  background-color: #181d30;
+  text-align: center;
+  padding: 25px 0px;
+  margin-top: auto;
+  /* Umístí footer na konec stránky */
+}
+
+footer p {
+  color: #fff;
+  font-weight: 300;
+}
+
+footer p a {
+  color: #ff511a;
+}

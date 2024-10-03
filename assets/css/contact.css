@@ -4,15 +4,70 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+
 /* 
 ---------------------------------------------
 reset
 --------------------------------------------- 
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -40,13 +95,20 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
-ul, li {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-header, nav, section, article, aside, footer, hgroup {
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
   display: block;
 }
 
@@ -54,7 +116,8 @@ header, nav, section, article, aside, footer, hgroup {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   background-color: #fff;
@@ -68,7 +131,12 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #212741;
@@ -89,18 +157,20 @@ img {
   overflow: hidden;
 }
 
-html, body {
-    height: 100%;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .wrapper {
-    flex: 1;
-  }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
 /* 
 ---------------------------------------------
 global styles
@@ -123,16 +193,21 @@ body {
 }
 
 @media (max-width: 991px) {
-  html, body {
+
+  html,
+  body {
     overflow-x: hidden;
   }
+
   .mobile-top-fix {
     margin-top: 30px;
     margin-bottom: 0px;
   }
+
   .mobile-bottom-fix {
     margin-bottom: 30px;
   }
+
   .mobile-bottom-fix-big {
     margin-bottom: 60px;
   }
@@ -209,34 +284,19 @@ section {
 header
 --------------------------------------------- 
 */
-
-.kontakt{
-  background-color: #ff511a;
-  padding: 0px 20px !important;
-  display: inline-block;
-  border-radius: 5px;
-  /*text-transform: capitalize;*/
-  height: auto;
-  line-height: 20px;
-}
-
-
-
-
 .background-header {
   background-color: #212741;
-  height: 80px!important;
-  position: fixed!important;
-  top: 0!important;
+  height: 80px !important;
+  position: fixed !important;
+  top: 0 !important;
   left: 0;
   right: 0;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
 }
+
 
 
 .header-area {
-  background-image: url(../images/header-bg.png);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -249,31 +309,29 @@ header
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
-  background-color: #212741;
 }
 
 .header-area .main-nav {
   min-height: 80px;
-  background: transparent;
+  background: #212741;
 }
 
 .header-area .main-nav .logo {
-  line-height: 120px;
+  line-height: 80px;
   color: #fff;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   float: left;
-  margin-top: -0.45rem;
 }
 
 .background-header .main-nav .logo {
-  line-height: 0px;
+  line-height: 80px;
   width: 160px;
 }
 
-#logo-text{
+#logo-text {
   color: #ff511a;
 }
 
@@ -283,13 +341,9 @@ header
 
 .header-area .main-nav .nav {
   float: right;
-  margin-top: 23px;
+  margin-top: 19.3px;
   margin-right: 0px;
-  background-color: transparent;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  background-color: #212741;
   position: relative;
   z-index: 999;
 }
@@ -315,7 +369,7 @@ header
   transition: all 0.3s ease 0s;
   height: 40px;
   line-height: 40px;
-  border: transparent;
+  border: #212741;
   letter-spacing: 1px;
 }
 
@@ -332,6 +386,21 @@ header
   line-height: 25px;
   letter-spacing: 0.5px;
   transition: all .3s;
+}
+
+.kontakt {
+  color: #fff;
+  background-color: #ff511a;
+  padding: 0px 20px !important;
+  display: inline-block;
+  border-radius: 5px;
+  /*text-transform: capitalize;*/
+  height: auto;
+  line-height: 20px;
+}
+
+#kontakt:hover a {
+  color: #fff;
 }
 
 .header-area .main-nav .nav li:last-child a:hover {
@@ -357,14 +426,6 @@ header
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
   color: #ff511a;
-}
-
-#kontakt:hover a{
-  color: #fff;
-}
-
-.kontakt:hover a, .kontakt a.active{
-  color: #fff;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -413,14 +474,10 @@ header
   opacity: 1;
   display: block;
   background: #f7f7f7;
-  color: #2a2a2a!important;
+  color: #2a2a2a !important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   position: relative;
   font-size: 12px;
   font-weight: 400;
@@ -429,7 +486,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: #ff511a!important;
+  color: #ff511a !important;
   padding-left: 25px;
 }
 
@@ -475,6 +532,10 @@ header
   width: 30px;
   height: 2px;
   left: 0;
+}
+
+.header-area {
+  background-color: #212741;
 }
 
 .background-header .main-nav .menu-trigger span,
@@ -532,7 +593,7 @@ header
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
 .header-area .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
+  background-color: #212741;
   width: 100%;
 }
 
@@ -572,11 +633,14 @@ header
   color: #ff511a;
 }
 
+
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 10px;
     padding-right: 10px;
   }
+
   .header-area .main-nav:before {
     display: none;
   }
@@ -585,16 +649,18 @@ header
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
     color: #ff511a;
-    margin-top: 0rem;
   }
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #ff511a!important;
+    color: #ff511a !important;
     opacity: 1;
   }
+
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
+
   .header-area {
     background-color: #f7f7f7;
     padding: 0px 15px;
@@ -602,19 +668,24 @@ header
     box-shadow: none;
     text-align: center;
   }
+
   .header-area .container {
     padding: 0px;
   }
+
   .header-area .logo {
     margin-left: 0px;
     line-height: 80px;
   }
+
   .header-area .menu-trigger {
     display: block !important;
   }
+
   .header-area .main-nav {
     overflow: hidden;
   }
+
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
@@ -625,15 +696,19 @@ header
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
+
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
   }
+
   .header-area.header-sticky .nav {
     margin-top: 100px !important;
   }
+
   .background-header.header-sticky .nav {
     margin-top: 80px !important;
   }
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -641,6 +716,7 @@ header
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .header-area .main-nav .nav li a {
     height: 50px !important;
     line-height: 50px !important;
@@ -649,10 +725,12 @@ header
     background: #f7f7f7 !important;
     color: #191a20 !important;
   }
+
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #ff511a!important;
+    color: #ff511a !important;
   }
+
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
     visibility: inherit;
@@ -665,23 +743,29 @@ header
     height: 0px;
     transition: all 0s;
   }
+
   .header-area .main-nav .nav li.submenu ul li a {
     font-size: 12px;
     font-weight: 400;
   }
+
   .header-area .main-nav .nav li.submenu ul li a:hover:before {
     width: 0px;
   }
+
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     height: auto;
   }
+
   .header-area .main-nav .nav li.has-sub:after {
     color: #3B566E;
     right: 30px;
     font-size: 14px;
     top: 15px;
   }
-  .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+
+  .header-area .main-nav .nav li.submenu:hover ul,
+  .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
 }
@@ -692,6 +776,7 @@ header
   }
 }
 
+
 /* 
 ---------------------------------------------
 contact us page
@@ -700,271 +785,305 @@ contact us page
 
 
 section.map .info-item {
-    text-align: center;
-    padding: 40px 30px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin-top: -60px;
-    margin-left: 15px;
-    margin-right: 15px;
-    position: relative;
-    z-index: 2;
-    transition: all .5s;
-  }
-  
-  section.map .info-item:hover {
-    margin-top: -70px;
-  }
-  
-  section.map .info-item i {
-    font-size: 36px;
-    color: #43ba7f;
-    margin-bottom: 25px;
-  }
-  
-  section.map .info-item h4 {
-    font-size: 18px;
-    color: #212741;
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  
-  section.map .info-item a {
-    font-size: 15px;
-    font-weight: 600;
-    color: #43ba7f;
-    transition: all 0.3s;
-  }
-  
-  section.map .info-item a:hover {
-    color: #ff511a;
-  }
-  
-  section.map {
-    margin-bottom: 90px;
-  }
-  
-  #contact input {
-    width: 100%;
-    height: 50px;
-    background-color: #f7f7f7;
-    color: #212741;
-    border-radius: 5px;
-    border: none;
-    padding: 0px 15px;
-    font-size: 14px;
-    outline: none;
-    margin-bottom: 30px;
-  }
-  
-  #contact textarea {
-    width: 100%;
-    height: 180px;
-    max-height: 24px;
-    min-height: 150px;
-    background-color: #f7f7f7;
-    color: #212741;
-    border-radius: 5px;
-    border: none;
-    padding: 15px 15px;
-    font-size: 14px;
-    outline: none;
-    margin-bottom: 30px;
-  }
-  
-  #contact input::placeholder, 
-  #contact textarea::placeholder {
-    color: #212741;
-  }
-  #contact button.orange-button {
-    font-size: 14px;
-    color: #fff;
-    background-color: #ff511a;
-    padding: 12px 30px;
-    display: inline-block;
-    border-radius: 5px;
-    font-weight: 500;
-    /*text-transform: capitalize;*/
-    letter-spacing: 0.5px;
-    border: none;
-    transition: all .3s;
-  }
-  
-  #contact button.orange-button:hover {
-    background-color: #43ba7f;
-  }
-  
-  /* 
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  z-index: 2;
+  transition: all .5s;
+}
+
+section.map .info-item:hover {
+  margin-top: -70px;
+}
+
+section.map .info-item i {
+  font-size: 36px;
+  color: #43ba7f;
+  margin-bottom: 25px;
+}
+
+section.map .info-item h4 {
+  font-size: 18px;
+  color: #212741;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+section.map .info-item a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #43ba7f;
+  transition: all 0.3s;
+}
+
+section.map .info-item a:hover {
+  color: #ff511a;
+}
+
+section.map {
+  margin-bottom: 90px;
+}
+
+#contact input {
+  width: 100%;
+  height: 50px;
+  background-color: #f7f7f7;
+  color: #212741;
+  border-radius: 5px;
+  border: none;
+  padding: 0px 15px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#contact textarea {
+  width: 100%;
+  height: 180px;
+  max-height: 24px;
+  min-height: 150px;
+  background-color: #f7f7f7;
+  color: #212741;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 15px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #212741;
+}
+
+#contact button.orange-button {
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff511a;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 500;
+  /*text-transform: capitalize;*/
+  letter-spacing: 0.5px;
+  border: none;
+  transition: all .3s;
+}
+
+#contact button.orange-button:hover {
+  background-color: #43ba7f;
+}
+
+/* 
   ---------------------------------------------
   responsive
   --------------------------------------------- 
   */
-  
-  
-  body {
-    overflow-x: hidden;
-  }
-  
-  .header-text{
-    max-width: 80%;
-  }
-  
-  @media (max-width: 992px) {
-    .header-area .main-nav .nav li:last-child {
-      display: none;
-    }
-    .header-area .main-nav .nav li ul li:last-child {
-      display: inline-block;
-    }
-    .header-area {
-      background-color: #212741;
-    }
-    .slide-inner .header-text {
-      width: 80%;
-    }
-    .simple-cta {
-      text-align: center;
-    }
-    section.simple-cta .buttons {
-      justify-content: center;
-    }
-    section.about-us .naccs .menu div,
-    section.service-details .naccs .menu div {
-      margin-right: 15px;
-      font-size: 15px;
-      padding: 15px 20px;
-    }
-    section.about-us .right-content {
-      margin-left: 0px;
-      margin-top: 60px;
-    }
-    section.calculator .left-image {
-      display: none;
-    }
-    .testimonials .item img {
-      max-width: 200px;
-      right: 50px;
-    }
-    section.partners .item {
-      margin:15px; 
-    }
-    section.top-section .accordions {
-      margin-left: 0px;
-      margin-top: 45px;
-    }
-    .what-we-do .left-content {
-      margin-right: 0px;
-      margin-bottom: 45px;
-    }
-    .main-services .left-image {
-      margin-right: 0px;
-      margin-bottom: 30px;
-    }
-    .main-services .right-text-content {
-      margin-left: 0px;
-    }
-    .main-services .right-image {
-      margin-left: 0px;
-      margin-top: 30px;
-    }
-    section.service-details ul.nacc li .left-image {
-      position: relative;
-      margin-right: 0px;
-      transform: translateY(0px);
-    }
-    section.service-details ul.nacc li .left-image img {
-      border-radius: 15px;
-    }
-    section.service-details ul.nacc li .right-content {
-      padding: 50px;
-      margin-left: 0px;
-    }
-    section.service-details ul.nacc li .right-content h4 {
-      margin-right: 0px;
-    }
-    section.service-details ul.nacc li.active {
-      display: inline-block;
-    }
-    section.service-details ul.nacc li {
-      display: none;
-    }
-    section.map .info-item {
-      margin-top: 30px;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .header-area .main-nav .logo {
-      line-height: 100px;
-    }
-    .background-header .main-nav .logo {
-      line-height: 80px;
-    }
-    .header-area .main-nav .nav li.has-sub ul.sub-menu {
-      display: none;
-    }
-    .slide-inner .header-text p {
-      display: none;
-    }
-    .slide-inner .header-text {
-      text-align: center;
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-    .slide-inner .header-text .div-dec {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .slide-inner .header-text .buttons {
-      display: inline-flex;
-    }
-    .slide-inner .header-text .buttons .green-button {
-      float: none;
-    }
-    .services .service-item i {
-      margin-bottom: 35px;
-    }
-    section.about-us ul.nacc li span.item-title {
-      font-size: 14px !important;
-    }
-    section.about-us ul.nacc li span.item {
-      font-size: 13px;
-    }
-    .testimonials .item i {
-      margin-bottom: 60px;
-    }
-    .testimonials .item img {
-      max-width: 100px;
-      right: 50px;
-      top: 35px;
-      transform: translateY(0);
-    }
-    .testimonials .item {
-      padding: 50px;
-    }
+
+
+body {
+  overflow-x: hidden;
+}
+
+.header-text {
+  max-width: 80%;
+}
+
+@media (max-width: 992px) {
+  .header-area .main-nav .nav li:last-child {
+    display: none;
   }
 
-  /* 
+  .header-area .main-nav .nav li ul li:last-child {
+    display: inline-block;
+  }
+
+  .header-area {
+    background-color: #212741;
+  }
+
+  .slide-inner .header-text {
+    width: 80%;
+  }
+
+  .simple-cta {
+    text-align: center;
+  }
+
+  section.simple-cta .buttons {
+    justify-content: center;
+  }
+
+  section.about-us .naccs .menu div,
+  section.service-details .naccs .menu div {
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+
+  section.about-us .right-content {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
+
+  section.calculator .left-image {
+    display: none;
+  }
+
+  .testimonials .item img {
+    max-width: 200px;
+    right: 50px;
+  }
+
+  section.partners .item {
+    margin: 15px;
+  }
+
+  section.top-section .accordions {
+    margin-left: 0px;
+    margin-top: 45px;
+  }
+
+  .what-we-do .left-content {
+    margin-right: 0px;
+    margin-bottom: 45px;
+  }
+
+  .main-services .left-image {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .main-services .right-text-content {
+    margin-left: 0px;
+  }
+
+  .main-services .right-image {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+
+  section.service-details ul.nacc li .left-image {
+    position: relative;
+    margin-right: 0px;
+    transform: translateY(0px);
+  }
+
+  section.service-details ul.nacc li .left-image img {
+    border-radius: 15px;
+  }
+
+  section.service-details ul.nacc li .right-content {
+    padding: 50px;
+    margin-left: 0px;
+  }
+
+  section.service-details ul.nacc li .right-content h4 {
+    margin-right: 0px;
+  }
+
+  section.service-details ul.nacc li.active {
+    display: inline-block;
+  }
+
+  section.service-details ul.nacc li {
+    display: none;
+  }
+
+  section.map .info-item {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    line-height: 100px;
+  }
+
+  .background-header .main-nav .logo {
+    line-height: 80px;
+  }
+
+  .header-area .main-nav .nav li.has-sub ul.sub-menu {
+    display: none;
+  }
+
+  .slide-inner .header-text p {
+    display: none;
+  }
+
+  .slide-inner .header-text {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .slide-inner .header-text .div-dec {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-inner .header-text .buttons {
+    display: inline-flex;
+  }
+
+  .slide-inner .header-text .buttons .green-button {
+    float: none;
+  }
+
+  .services .service-item i {
+    margin-bottom: 35px;
+  }
+
+  section.about-us ul.nacc li span.item-title {
+    font-size: 14px !important;
+  }
+
+  section.about-us ul.nacc li span.item {
+    font-size: 13px;
+  }
+
+  .testimonials .item i {
+    margin-bottom: 60px;
+  }
+
+  .testimonials .item img {
+    max-width: 100px;
+    right: 50px;
+    top: 35px;
+    transform: translateY(0);
+  }
+
+  .testimonials .item {
+    padding: 50px;
+  }
+}
+
+/* 
 ---------------------------------------------
 footer 
 --------------------------------------------- 
 */
 
 footer {
-    background-color: #181d30;
-    text-align: center;
-    padding: 25px 0px;
-  }
-  
-  footer p {
-    color: #fff;
-    font-weight: 300;
-  }
-  
-  footer p a {
-    color: #ff511a;
-  }
+  background-color: #181d30;
+  text-align: center;
+  padding: 25px 0px;
+}
 
-  
+footer p {
+  color: #fff;
+  font-weight: 300;
+}
+
+footer p a {
+  color: #ff511a;
+}

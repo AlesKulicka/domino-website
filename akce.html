@@ -18,7 +18,63 @@
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/akce.css">
+  <style>
+  .event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Zvětšeno na 300px */
+  gap: 20px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+  background: #fff;
+  height: 100%;
+  max-width: 400px; /* Přidána maximální šířka */
+  margin: 0 auto; /* Zarovnání na střed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  max-height: 550px; /* Zvýšeno pro větší obrázky */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.event-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.event-info h5 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.event-info p {
+  font-size: 0.9rem;
+  margin: 8px 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Počet řádků, na které se text omezí */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  </style>
 </head>
+
 
 <body>
   <div class="wrapper">

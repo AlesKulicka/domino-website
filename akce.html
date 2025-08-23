@@ -2,230 +2,266 @@
 <html lang="cs">
 
 <head>
-  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-  <title>Domino Project z.s. - Akce</title>
+    <title>Domino Project z.s. - Akce</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/akce.css">
-  <style>
-  .event-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Zvětšeno na 300px */
-  gap: 20px;
-}
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/akce.css">
+    <style>
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Zvětšeno na 300px */
+            gap: 20px;
+        }
 
-.event-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 16px;
-  background: #fff;
-  height: 100%;
-  max-width: 400px; /* Přidána maximální šířka */
-  margin: 0 auto; /* Zarovnání na střed */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        .event-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 16px;
+            background: #fff;
+            height: 100%;
+            max-width: 400px;
+            /* Přidána maximální šířka */
+            margin: 0 auto;
+            /* Zarovnání na střed */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.event-card img {
-  max-height: 550px; /* Zvýšeno pro větší obrázky */
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
+        .event-card img {
+            max-height: 550px;
+            /* Zvýšeno pro větší obrázky */
+            width: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
 
-.event-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
+        .event-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
 
-.event-info h5 {
-  font-size: 1.2rem;
-  margin: 8px 0;
-}
+        .event-info h5 {
+            font-size: 1.2rem;
+            margin: 8px 0;
+        }
 
-.event-info p {
-  font-size: 0.9rem;
-  margin: 8px 0;
-  flex-grow: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Počet řádků, na které se text omezí */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-  </style>
+        .event-info p {
+            font-size: 0.9rem;
+            margin: 8px 0;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            /* Počet řádků, na které se text omezí */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 
 <body>
-  <div class="wrapper">
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <a href="./" class="logo">
-                <h1 class="logo" id="logo-text">DOMINO</h1>
-              </a>
-              <ul class="nav">
-                <li class="scroll-to-section"><a href="./">Domů</a></li>
-                <li class="has-sub">
-                  <a href="javascript:void(0)">Naše projekty</a>
-                  <ul class="sub-menu">
-                    <li><a href="./domino-project">Domino project</a></li>
-                    <li><a href="./domino-theater">Domino theater</a></li>
-                  </ul>
-                </li>
-                <li><a href="./akce" class="active">Akce</a></li>
-                <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
-                <li></li>
-              </ul>
-              <a class='menu-trigger'>
-                <span>Menu</span>
-              </a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+    <div class="wrapper">
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <a href="./" class="logo">
+                                <h1 class="logo" id="logo-text">DOMINO</h1>
+                            </a>
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="./">Domů</a></li>
+                                <li class="has-sub">
+                                    <a href="javascript:void(0)">Naše projekty</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./domino-project">Domino project</a></li>
+                                        <li><a href="./domino-theater">Domino theater</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./akce" class="active">Akce</a></li>
+                                <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
+                                <li></li>
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
 
 
-    <!-- Nadcházející akce sekce (upcoming-events) -->
-    <section class="section" id="upcoming-events">
-      <div class="container">
-        <div class="section-heading">
-          <h4>Nadcházející akce</h4>
-        </div>
-        <div id="upcoming-events-container" class="event-grid">
-          <div class="event-card">
-            <img src="assets/images/der_turm.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Der Turm</h5>
-              <p>(Představení v němčině)<br>Dva příběhy bratří Grimmů spojuje motiv věže...</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="turm">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/henry_six.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Henry and Six Wives</h5>
-              <p>Představení inspirováno anglickými dějinami 1. poloviny 16. století.</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="henry">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/around_the_world.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Around the World With Mary Poppins</h5>
-              <p>Hravé představení volně inspirováno postavou Mary Poppins.</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="world">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/A_Midsummer_Night's_Dream_clean_Fotor.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>A Midsummer Night’s Dream</h5>
-              <p>Hra na motivy slavné komedie Williama Shakespeara.</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="midsummer">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/Canterbury Tales.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>The Canterbury Tales</h5>
-              <p>Canterburské povídky autora Geoﬀreyho Chaucera</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="tales">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <!-- Další karty akcí -->
-        </div>
-        <div class="pagination-buttons">
-          <button id="upcoming-events-prev-page">Předchozí</button>
-          <button id="upcoming-events-next-page">Další</button>
-        </div>
-      </div>
-    </section>
-    <!-- ***** Upcoming Events Section End ***** -->
+        <!-- Nadcházející akce sekce (upcoming-events) -->
+        <section class="section" id="upcoming-events">
+            <div class="container">
+                <div class="section-heading">
+                    <h4>Nadcházející akce</h4>
+                </div>
+                <div id="upcoming-events-container" class="event-grid">
+                    <div class="event-card">
+                        <img src="assets/images/my-family.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>My Family and other Animals</h5>
+                            <p></p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="none-1">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/fighting-windmills.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Fighting Windmills</h5>
+                            <p></p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="none-2">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/uber-die-liebe.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>3x über die Liebe</h5>
+                            <p></p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="none-3">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/around_the_world.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Around the World With Mary Poppins</h5>
+                            <p>Hravé představení volně inspirováno postavou Mary Poppins.</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="world">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Minulé akce sekce (past-events) -->
-    <section class="section" id="past-events">
-      <div class="container">
-        <div class="section-heading">
-          <h4>Již proběhlé akce</h4>
-        </div>
-        <div id="past-events-container" class="event-grid">
-          <div class="event-card">
-            <img src="assets/images/Pippi.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Pippi Longstocking</h5>
-              <p>Hravé představení na motivy oblíbené dětské knihy.</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="pippi">Více informací</a>
-              </div>
+                    <!-- Další karty akcí -->
+                </div>
+                <div class="pagination-buttons">
+                    <button id="upcoming-events-prev-page">Předchozí</button>
+                    <button id="upcoming-events-next-page">Další</button>
+                </div>
             </div>
-          </div>
-          <div class="event-card">
-            <div class="event-info">
-              <img src="assets/images/vyplndp.jpg" alt="Event Image">
-              <h5>Lord of the Flies</h5>
-              <p>Hra pojednává o trosečnících na opuštěném ostrově...</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="flie">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/vyplndp.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Čarodějka Winnie</h5>
-              <p>Kouzelná pohádka o nerozlučné dvojce...</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="winnie">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="assets/images/vyplndp.jpg" alt="Event Image">
-            <div class="event-info">
-              <h5>Ahoj, moře</h5>
-              <p>Když venku fičí severák a mráz maluje...</p>
-              <div class="orange-button">
-                <a href="#" class="info-button" data-event="more">Více informací</a>
-              </div>
-            </div>
-          </div>
-          <!--<div class="event-card">
+        </section>
+        <!-- ***** Upcoming Events Section End ***** -->
+
+        <!-- Minulé akce sekce (past-events) -->
+        <section class="section" id="past-events">
+            <div class="container">
+                <div class="section-heading">
+                    <h4>Již proběhlé akce</h4>
+                </div>
+                <div id="past-events-container" class="event-grid">
+                    <div class="event-card">
+                        <img src="assets/images/A_Midsummer_Night's_Dream_clean_Fotor.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>A Midsummer Night’s Dream</h5>
+                            <p>Hra na motivy slavné komedie Williama Shakespeara.</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="midsummer">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/Canterbury Tales.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>The Canterbury Tales</h5>
+                            <p>Canterburské povídky autora Geoﬀreyho Chaucera</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="tales">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/der_turm.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Der Turm</h5>
+                            <p>(Představení v němčině)<br>Dva příběhy bratří Grimmů spojuje motiv věže...</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="turm">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/henry_six.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Henry and Six Wives</h5>
+                            <p>Představení inspirováno anglickými dějinami 1. poloviny 16. století.</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="henry">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/Pippi.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Pippi Longstocking</h5>
+                            <p>Hravé představení na motivy oblíbené dětské knihy.</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="pippi">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-info">
+                            <img src="assets/images/vyplndp.jpg" alt="Event Image">
+                            <h5>Lord of the Flies</h5>
+                            <p>Hra pojednává o trosečnících na opuštěném ostrově...</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="flie">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/vyplndp.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Čarodějka Winnie</h5>
+                            <p>Kouzelná pohádka o nerozlučné dvojce...</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="winnie">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="assets/images/vyplndp.jpg" alt="Event Image">
+                        <div class="event-info">
+                            <h5>Ahoj, moře</h5>
+                            <p>Když venku fičí severák a mráz maluje...</p>
+                            <div class="orange-button">
+                                <a href="#" class="info-button" data-event="more">Více informací</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="event-card">
             <img src="assets/images/inf.jpg" alt="Event Image">
             <div class="event-info">
               <h5>Název Akce 2</h5>
@@ -255,169 +291,207 @@
               </div>
             </div>
           </div> -->
-          <!-- Další karty akce -->
-        </div>
-        <div class="pagination-buttons">
-          <button id="past-events-prev-page">Předchozí</button>
-          <button id="past-events-next-page">Další</button>
-        </div>
-      </div>
-    </section>
+                    <!-- Další karty akce -->
+                </div>
+                <div class="pagination-buttons">
+                    <button id="past-events-prev-page">Předchozí</button>
+                    <button id="past-events-next-page">Další</button>
+                </div>
+            </div>
+        </section>
 
-    <dialog id="pippi-dialog">
-      <h2>Pippi Longstocking</h2>
-      <p>Hravé představení na motivy oblíbené dětské knihy autorky Astrid Lindgrenové zavede děti mezi piráty, na ostrov
-        kanibalů nebo například do světa cirkusových umělců.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="pippi-dialog">
+            <h2>Pippi Longstocking</h2>
+            <p>Hravé představení na motivy oblíbené dětské knihy autorky Astrid Lindgrenové zavede děti mezi piráty, na
+                ostrov
+                kanibalů nebo například do světa cirkusových umělců.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="midsummer-dialog">
-      <h2>A Midsummer Night’s Dream</h2>
-      <p>Hra na motivy slavné komedie Williama Shakespeara. „Sen noci svatojánské“ patří k divácky nejvděčnějším
-        komediím
-        tohoto slavného autora. Je zde prostor pro romantiku, fantazii, humor, studentskou nadsázku a recesi. Lidský
-        svět
-        se propojuje se světem elfů a dochází k nečekaným zápletkám.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="none-1">
+            <h2>My Family and other Animals</h2>
+            <p></p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="tales-dialog">
-      <h2>The Canterbury Tales</h2>
-      <p>Canterburské povídky autor Geoﬀrey Chaucer svou literární úrovní zařadil mezi základní díla klasické anglické
-        literatury. Inscenace je moderními výrazovými prostředky a svou jevištní formou divadla na divadle přiblížena
-        současnému mladému publiku. Herci cestující vlakem na divadelní festival, využívají času k divadelní zkoušce.
-      </p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="none-2">
+            <h2>Fighting Windmills</h2>
+            <p></p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="winnie-dialog">
-      <h2>Čarodějka Winnie</h2>
-      <p>Kouzelná pohádka o nerozlučné dvojce, čarodějce a kocouru Wilburovi. Společně tito dva zažívají nečekaná
-        dobrodružství, do kterých se děti aktivně zapojí jako herci a zpěváci. Na závěr produkce děti čeká tematická
-        výtvarná dílna. Představení je plné barev, kouzel a legrace.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="none-3">
+            <h2>3x über die Liebe</h2>
+            <p></p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="more-dialog">
-      <h2>Ahoj, moře</h2>
-      <p>Když venku fičí severák a mráz maluje na okna, není ten nejlepší nápad zavzpomínat si na léto s Jiřím Žáčkem a
-        jeho půvabnými básničkami? Děti se promění v ryby, námořníky nebo třeba mořské víly. Na památku si každý vyrobí
-        papírovou lodičku.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="midsummer-dialog">
+            <h2>A Midsummer Night’s Dream</h2>
+            <p>Hra na motivy slavné komedie Williama Shakespeara. „Sen noci svatojánské“ patří k divácky nejvděčnějším
+                komediím
+                tohoto slavného autora. Je zde prostor pro romantiku, fantazii, humor, studentskou nadsázku a recesi.
+                Lidský
+                svět
+                se propojuje se světem elfů a dochází k nečekaným zápletkám.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="flie-dialog">
-      <h2>Lord of the Flies</h2>
-      <p>Dne 22. 3. 2024 vyrazilo šest tříd nižšího gymnázia na představení v angličtině Lord of the Flies. Volnou adaptací anglického bestselleru Williama Goldinga měli studenti možnost zhlédnout v podání brněnských herců z dětského a studentského souboru Domino Teens.</p>
-      <p>Hra pojednává o trosečnících na opuštěném ostrově a divák má možnost sledovat jejich snahu o záchranu, komunikační krize a působení extrémních podmínek divočiny na chování jednotlivých hrdinů. Příběh skupiny teenagerů byl plný napětí a nechyběly momenty dramatických zvratů.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="tales-dialog">
+            <h2>The Canterbury Tales</h2>
+            <p>Canterburské povídky autor Geoﬀrey Chaucer svou literární úrovní zařadil mezi základní díla klasické
+                anglické
+                literatury. Inscenace je moderními výrazovými prostředky a svou jevištní formou divadla na divadle
+                přiblížena
+                současnému mladému publiku. Herci cestující vlakem na divadelní festival, využívají času k divadelní
+                zkoušce.
+            </p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="turm-dialog">
-      <h2>Der Turm</h2>
-      <p>(Představení v němčině)</p>
-      <p>Dva příběhy bratří Grimmů spojuje motiv věže. Na jevišti se sejde skupina lidí, kteří pod vedením vypravěče hrají hru. Jejím principem je losovat karty ukryté ve věži a podle nich jim vypravěč přiděluje role v příběhu. Herci tak rozehrávají dva po sobě jdoucí příběhy z pera bratří Grimmů. Pokud věž spadne, vše končí.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="winnie-dialog">
+            <h2>Čarodějka Winnie</h2>
+            <p>Kouzelná pohádka o nerozlučné dvojce, čarodějce a kocouru Wilburovi. Společně tito dva zažívají nečekaná
+                dobrodružství, do kterých se děti aktivně zapojí jako herci a zpěváci. Na závěr produkce děti čeká
+                tematická
+                výtvarná dílna. Představení je plné barev, kouzel a legrace.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="henry-dialog">
-      <h2>Henry and Six Wives</h2>
-      <p>Představení je inspirováno anglickými dějinami 1. poloviny  16. století. Inscenace je očima turisty přiblížena současnému mladému publiku. Herci jako postavy Muzea voskových figurín Madame Tussaud ožívají ve svých příbězích. Rozlišení jednotlivých historických postav je pojato se studentskou nadsázkou a diváci se humornou formou seznamují s osudem šesti žen anglického panovníka.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="more-dialog">
+            <h2>Ahoj, moře</h2>
+            <p>Když venku fičí severák a mráz maluje na okna, není ten nejlepší nápad zavzpomínat si na léto s Jiřím
+                Žáčkem a
+                jeho půvabnými básničkami? Děti se promění v ryby, námořníky nebo třeba mořské víly. Na památku si každý
+                vyrobí
+                papírovou lodičku.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
-    <dialog id="world-dialog">
-      <h2>Around the World With Mary Poppins</h2>
-      <p>Hravé představení je volně inspirováno postavou Mary Poppins. Po boku slavné chůvy se děti postupně seznamují se zeměmi, kde se mluví anglicky. Prvkem blízkým publiku je věk herců, kromě dospělé Mary totiž na jevišti diváci uvidí děti své věkové kategorie.</p>
-      <button id="close-dialog">Zavřít</button>
-    </dialog>
+        <dialog id="flie-dialog">
+            <h2>Lord of the Flies</h2>
+            <p>Dne 22. 3. 2024 vyrazilo šest tříd nižšího gymnázia na představení v angličtině Lord of the Flies. Volnou
+                adaptací anglického bestselleru Williama Goldinga měli studenti možnost zhlédnout v podání brněnských
+                herců z dětského a studentského souboru Domino Teens.</p>
+            <p>Hra pojednává o trosečnících na opuštěném ostrově a divák má možnost sledovat jejich snahu o záchranu,
+                komunikační krize a působení extrémních podmínek divočiny na chování jednotlivých hrdinů. Příběh skupiny
+                teenagerů byl plný napětí a nechyběly momenty dramatických zvratů.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
+
+        <dialog id="turm-dialog">
+            <h2>Der Turm</h2>
+            <p>(Představení v němčině)</p>
+            <p>Dva příběhy bratří Grimmů spojuje motiv věže. Na jevišti se sejde skupina lidí, kteří pod vedením
+                vypravěče hrají hru. Jejím principem je losovat karty ukryté ve věži a podle nich jim vypravěč přiděluje
+                role v příběhu. Herci tak rozehrávají dva po sobě jdoucí příběhy z pera bratří Grimmů. Pokud věž spadne,
+                vše končí.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
+
+        <dialog id="henry-dialog">
+            <h2>Henry and Six Wives</h2>
+            <p>Představení je inspirováno anglickými dějinami 1. poloviny 16. století. Inscenace je očima turisty
+                přiblížena současnému mladému publiku. Herci jako postavy Muzea voskových figurín Madame Tussaud ožívají
+                ve svých příbězích. Rozlišení jednotlivých historických postav je pojato se studentskou nadsázkou a
+                diváci se humornou formou seznamují s osudem šesti žen anglického panovníka.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
+
+        <dialog id="world-dialog">
+            <h2>Around the World With Mary Poppins</h2>
+            <p>Hravé představení je volně inspirováno postavou Mary Poppins. Po boku slavné chůvy se děti postupně
+                seznamují se zeměmi, kde se mluví anglicky. Prvkem blízkým publiku je věk herců, kromě dospělé Mary
+                totiž na jevišti diváci uvidí děti své věkové kategorie.</p>
+            <button id="close-dialog">Zavřít</button>
+        </dialog>
 
 
 
 
 
-    <!-- ***** Footer Start ***** -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena!</p>
-            <li><a href="./zasady">Zásady zpracování osobních údajů</a></li>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- ***** Footer End ***** -->
-  </div>
+        <!-- ***** Footer Start ***** -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena!</p>
+                        <li><a href="./zasady">Zásady zpracování osobních údajů</a></li>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ***** Footer End ***** -->
+    </div>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/swiper.js"></script>
-  <script src="assets/js/custom.js"></script>
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/custom.js"></script>
 
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const eventsPerPage = 3;
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventsPerPage = 3;
 
-      function setupPagination(sectionId) {
-        const container = document.getElementById(`${sectionId}-container`);
-        const events = container.querySelectorAll('.event-card');
-        const totalPages = Math.ceil(events.length / eventsPerPage);
-        let currentPage = 1;
+            function setupPagination(sectionId) {
+                const container = document.getElementById(`${sectionId}-container`);
+                const events = container.querySelectorAll('.event-card');
+                const totalPages = Math.ceil(events.length / eventsPerPage);
+                let currentPage = 1;
 
-        function showPage(page) {
-          events.forEach((event, index) => {
-            event.style.display = (index >= (page - 1) * eventsPerPage && index < page * eventsPerPage) ? 'block' : 'none';
-          });
-        }
+                function showPage(page) {
+                    events.forEach((event, index) => {
+                        event.style.display = (index >= (page - 1) * eventsPerPage && index < page * eventsPerPage) ? 'block' : 'none';
+                    });
+                }
 
-        document.getElementById(`${sectionId}-prev-page`).addEventListener('click', () => {
-          if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage);
-          }
+                document.getElementById(`${sectionId}-prev-page`).addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        showPage(currentPage);
+                    }
+                });
+
+                document.getElementById(`${sectionId}-next-page`).addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        showPage(currentPage);
+                    }
+                });
+
+                showPage(currentPage);
+            }
+
+            // Nastavení paginace pro obě sekce
+            setupPagination('past-events');
+            setupPagination('upcoming-events');
         });
 
-        document.getElementById(`${sectionId}-next-page`).addEventListener('click', () => {
-          if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage);
-          }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Zobrazení dialogu s více informacemi
+            document.querySelectorAll('.info-button').forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const eventId = this.getAttribute('data-event');
+                    const dialog = document.getElementById(`${eventId}-dialog`);
+                    dialog.showModal();
+                });
+            });
+
+            // Zavření dialogu
+            document.querySelectorAll('dialog').forEach(dialog => {
+                dialog.querySelector('#close-dialog').addEventListener('click', () => {
+                    dialog.close();
+                });
+            });
         });
 
-        showPage(currentPage);
-      }
-
-      // Nastavení paginace pro obě sekce
-      setupPagination('past-events');
-      setupPagination('upcoming-events');
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Zobrazení dialogu s více informacemi
-      document.querySelectorAll('.info-button').forEach(button => {
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          const eventId = this.getAttribute('data-event');
-          const dialog = document.getElementById(`${eventId}-dialog`);
-          dialog.showModal();
-        });
-      });
-
-      // Zavření dialogu
-      document.querySelectorAll('dialog').forEach(dialog => {
-        dialog.querySelector('#close-dialog').addEventListener('click', () => {
-          dialog.close();
-        });
-      });
-    });
-
-  </script>
+    </script>
 </body>
 
 </html>

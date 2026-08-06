@@ -1,342 +1,972 @@
 <!DOCTYPE html>
-<html lang="cz">
-
+<html lang="cs">
 <head>
-  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Domino Project propojuje divadlo, dramatickou výchovu a výuku jazyků pro děti, žáky a studenty.">
+  <meta name="theme-color" content="#171c31">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Domino Project z.s. | Divadlo, jazyky a vzdělávání</title>
+  <style>
+    
 
-  <title>Domino Project z.s.</title>
+    .newsletter-select-widget {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+    }
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    .newsletter-select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
+    .newsletter-select-group label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #171c31;
+    }
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+    .newsletter-select {
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(23, 28, 49, 0.15);
+      font-size: 1rem;
+      font-family: inherit;
+      background: #ffffff;
+      color: #171c31;
+      max-width: 100%;
+      width: 100%;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23171c31' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1.1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .newsletter-select:focus {
+      outline: none;
+      border-color: #ff5a1f;
+      box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.15);
+    }
+
+    .newsletter-form {
+      width: 100%;
+    }
+
+    .newsletter-form__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+      row-gap: 1.25rem;
+      align-items: end;
+    }
+
+    .newsletter-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      min-width: 0;
+    }
+
+    .newsletter-field--email {
+      grid-column: 1 / 2;
+    }
+
+    .newsletter-field label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #171c31;
+    }
+
+    .newsletter-field input {
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(23, 28, 49, 0.15);
+      font-size: 1rem;
+      font-family: inherit;
+      color: #171c31;
+      background: #ffffff;
+      width: 100%;
+      min-width: 0;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .newsletter-field input::placeholder {
+      color: rgba(23, 28, 49, 0.4);
+    }
+
+    .newsletter-field input:focus {
+      outline: none;
+      border-color: #ff5a1f;
+      box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.15);
+    }
+
+    .newsletter-submit {
+      grid-column: 2 / 3;
+      align-self: end;
+      white-space: nowrap;
+    }
+
+    .newsletter-empty-hint {
+      font-size: 0.9rem;
+      color: rgba(23, 28, 49, 0.6);
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .newsletter-form__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-field--email {
+        grid-column: 1;
+      }
+
+      .newsletter-submit {
+        grid-column: 1;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html" aria-label="Domino – domovská stránka">DOMINO</a>
 
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="visually-hidden">Otevřít navigaci</span>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="./" class="logo">
-              <h1 class="logo" id="logo-text">DOMINO</h1>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="./" class="active">Domů</a></li>
-              <li class="has-sub">
-                <a href="javascript:void(0)">Naše projekty</a>
-                <ul class="sub-menu">
-                  <li><a href="./domino-project">Domino project</a></li>
-                  <li><a href="./domino-theater">Domino theatre</a></li>
-                </ul>
-              </li>
-              <li><a href="./akce">Akce</a></li>
-              <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
-              <li></li>
+        <nav class="site-nav" id="main-navigation" aria-label="Hlavní navigace">
+          <ul class="site-nav__list">
+            <li><a class="is-active" href="index.html" aria-current="page">Domů</a></li>
+            <li class="site-nav__projects">
+              <button class="submenu-toggle" type="button" aria-expanded="false">Naše projekty</button>
+              <ul class="site-nav__submenu">
+                <li><a href="domino-project.html">Domino Project</a></li>
+                <li><a href="domino-theater.html">Domino Theatre</a></li>
+              </ul>
+            </li>
+            <li><a href="akce.html">Akce</a></li>
+            <li><a class="site-nav__contact" href="kontakty.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero">
+        <div class="content-container home-hero__inner">
+          <div class="home-hero__copy">
+            <p class="eyebrow">Divadlo • jazyky • vzdělávání</p>
+            <h1>Učíme jazyky <span>příběhem.</span></h1>
+            <p class="home-hero__lead">
+              Tvoříme divadelní inscenace a interaktivní výukové projekty, které děti a studenty přirozeně vtahují do angličtiny, spolupráce a tvořivosti.
+            </p>
+            <div class="button-row">
+              <a class="button button--primary" href="akce.html">Aktuální program</a>
+              <a class="button button--ghost" href="kontakty.html">Napište nám</a>
+            </div>
+            <ul class="home-hero__facts">
+              <li><strong>Brno</strong><span>zázemí souboru</span></li>
+              <li><strong>Od 5 let</strong><span>děti i studenti</span></li>
+              <li><strong>V angličtině</strong><span>hrou a divadlem</span></li>
             </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+          </div>
 
-  <!-- ***** Main Banner Area Start ***** -->
-  <div class="swiper-container" id="top">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slide-inner" style="background-image: url('assets/images/dprojmain.JPG'); opacity: 1;">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="header-text" id="">
-                  <h2>Domino <em>project</em></h2>
-                  <div class="div-dec"></div>
-                  <p id="header-text-color">Domino Project nabízí interaktivní výukové projekty s uplatněním
-                    mezipředmětových vztahů pro žáky z mateřských, základních a středních škol. Dlouhodobé projekty
-                    směřují k navázání kontaktu vybrané školy se zahraniční školou a k tvůrčí partnerské spolupráci dětí
-                    odlišných zemí.</p>
-                  <div class="buttons">
-                    <div class="green-button">
-                      <a href="./domino-project">Zjistit víc</a>
-                    </div>
-                    <div class="orange-button">
-                      <a href="./kontakty">Kontakt</a>
-                    </div>
-                  </div>
-                </div>
+          <div class="home-hero__visual" role="group" aria-label="Naše hlavní projekty">
+            <a class="hero-project" href="domino-project.html">
+              <img src="assets/images/dprojmain.JPG" alt="Mladí herci souboru Domino při společné zkoušce">
+              <div class="hero-project__content">
+                <p class="hero-project__label">Výukové projekty</p>
+                <h2>Domino Project</h2>
+                <span class="hero-project__link">Poznat projekt</span>
               </div>
+            </a>
+
+            <a class="hero-project" href="domino-theater.html">
+              <img src="assets/images/dtheatmain.jpg" alt="Herečka souboru Domino Theatre na jevišti">
+              <div class="hero-project__content">
+                <p class="hero-project__label">Divadelní soubor</p>
+                <h2>Domino Theatre</h2>
+                <span class="hero-project__link">Poznat soubor</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="mission-title">
+        <div class="content-container mission-grid">
+          <div class="mission-copy">
+            <p class="eyebrow">O nás</p>
+            <h2 id="mission-title">Rozvíjíme jazyk, tvořivost i odvahu vystoupit</h2>
+            <p>
+              Členové se pod odborným vedením zdokonalují nejen v angličtině. Práce probíhá s kvalifikovanými lektory a děti i studenti se při ní setkávají také s rodilými mluvčími.
+            </p>
+            <p>
+              Dlouhodobé projekty propojují školy, podporují tvůrčí spolupráci dětí z různých zemí a výsledky pravidelně představujeme rodičům i školní veřejnosti.
+            </p>
+          </div>
+
+          <aside class="mission-card">
+            <h3>Program pro školy</h3>
+            <p>Hledáte divadelní představení, workshop nebo výukový projekt pro svou třídu?</p>
+            <a class="button button--primary" href="domino-project.html#nabizime">Prohlédnout nabídku</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="projects-title">
+        <div class="content-container">
+          <header class="section-heading">
+            <p class="eyebrow">Naše činnost</p>
+            <h2 id="projects-title">Dva projekty, jeden společný příběh</h2>
+            <p>Výuka a divadlo se u nás navzájem doplňují.</p>
+          </header>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card__image">
+                <img src="assets/images/dprojmain.JPG" alt="">
+                <img class="project-card__logo" src="assets/images/dprojectlogo.svg" alt="Logo Domino Project">
+              </div>
+              <div class="project-card__body">
+                <h3>Domino Project</h3>
+                <p>Interaktivní výukové projekty s uplatněním mezipředmětových vztahů pro mateřské a střední školy.</p>
+                <a class="button button--secondary" href="domino-project.html">Zjistit více</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__image">
+                <img src="assets/images/dtheatmain.jpg" alt="">
+                <img class="project-card__logo" src="assets/images/dtheaterlogo.svg" alt="Logo Domino Theatre">
+              </div>
+              <div class="project-card__body">
+                <h3>Domino Theatre</h3>
+                <p>Amatérský divadelní soubor pro děti od pěti let, žáky, středoškoláky i vysokoškolské studenty.</p>
+                <a class="button button--secondary" href="domino-theater.html">Zjistit více</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="reviews-title">
+        <div class="content-container">
+          <header class="section-heading">
+            <p class="eyebrow">Recenze</p>
+            <h2 id="reviews-title">Co o nás říkají diváci</h2>
+            <p>Ohlasy na anglické představení Lord of the Flies.</p>
+          </header>
+
+          <div class="testimonial-grid">
+            <article class="testimonial">
+              <blockquote>
+                <p>Hra se mi celkově líbila. Zaujaly mě kulisy, světla i hudba a herci měli hru perfektně nacvičenou. Anglická výslovnost byla krásně srozumitelná a citlivě podaná.</p>
+                <footer>
+                  <cite>Veronika Šolcová</cite>
+                  <span>Lord of the Flies</span>
+                </footer>
+              </blockquote>
+            </article>
+
+            <article class="testimonial">
+              <blockquote>
+                <p>Divadlo bylo krásné a herci to dobře zahráli. Někdy jsem se trochu bála, jindy jsem se zase smála. Celkově jsem byla spokojená.</p>
+                <footer>
+                  <cite>Tereza Božková</cite>
+                  <span>Lord of the Flies</span>
+                </footer>
+              </blockquote>
+            </article>
+
+            <article class="testimonial">
+              <blockquote>
+                <p>Představení se mi líbilo hlavně díky zpracování a srozumitelnosti angličtiny.</p>
+                <footer>
+                  <cite>Jan Chalupecký</cite>
+                  <span>Lord of the Flies</span>
+                </footer>
+              </blockquote>
+            </article>
+
+            <article class="testimonial">
+              <blockquote>
+                <p>Divadlo se mi líbilo a srozumitelnost byla dobrá. Měla bych zájem přijít i v dalších letech na další vystoupení.</p>
+                <footer>
+                  <cite>Lucie Orlitová</cite>
+                  <span>Lord of the Flies</span>
+                </footer>
+              </blockquote>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--warm" aria-labelledby="newsletter-title">
+        <div class="content-container">
+          <div class="newsletter-card">
+            <div>
+              <p class="eyebrow">Newsletter</p>
+              <h2 id="newsletter-title">Nenechte si ujít další představení</h2>
+              <p>Vyberte si, o jaké novinky máte zájem, a přihlaste se k odběru. Odesláním souhlasíte se <a href="zasady.html">zásadami zpracování osobních údajů</a>.</p>
+            </div>
+
+            <div class="newsletter-widget newsletter-select-widget">
+              <div class="newsletter-select-group">
+                <label for="newsletter-list-select">Vyberte prosím odběr novinek podle oblasti a školy</label>
+                <select id="newsletter-list-select" class="newsletter-select">
+                  <option value="" selected disabled hidden>Vyberte možnost…</option>
+                  <option value="list-01">Plzeň NJ ZŠ</option>
+                  <option value="list-02">Plzeň NJ SŠ</option>
+                  <option value="list-03">Plzeň AJ ZŠ</option>
+                  <option value="list-04">Plzeň AJ SŠ</option>
+                  <option value="list-05">Pardubice NJ ZŠ</option>
+                  <option value="list-06">Pardubice NJ SŠ</option>
+                  <option value="list-07">Pardubice AJ ZŠ</option>
+                  <option value="list-08">Pardubice AJ SŠ</option>
+                  <option value="list-09">Jihlava NJ ZŠ</option>
+                  <option value="list-10">Jihlava NJ SŠ</option>
+                  <option value="list-11">Jihlava AJ ZŠ</option>
+                  <option value="list-12">Jihlava AJ SŠ</option>
+                  <option value="list-13">Frýdek Místek NJ ZŠ</option>
+                  <option value="list-14">Frýdek Místek NJ SŠ</option>
+                  <option value="list-15">Frýdek Místek AJ ZŠ</option>
+                  <option value="list-16">Frýdek Místek AJ SŠ</option>
+                  <option value="list-17">Opava NJ ZŠ</option>
+                  <option value="list-18">Opava NJ SŠ</option>
+                  <option value="list-19">Opava AJ ZŠ</option>
+                  <option value="list-20">Opava AJ SŠ</option>
+                  <option value="list-21">Ostrava NJ ZŠ</option>
+                  <option value="list-22">Ostrava NJ SŠ</option>
+                  <option value="list-23">Ostrava AJ ZŠ</option>
+                  <option value="list-24">Ostrava AJ SŠ</option>
+                  <option value="list-25">Praha NJ ZŠ</option>
+                  <option value="list-26">Praha NJ SŠ</option>
+                  <option value="list-27">Praha AJ ZŠ</option>
+                  <option value="list-28">Praha AJ SŠ</option>
+                  <option value="list-29">Brno NJ ZŠ</option>
+                  <option value="list-30">Brno NJ SŠ</option>
+                  <option value="list-31">Brno AJ ZŠ</option>
+                  <option value="list-32">Brno AJ SŠ</option>
+                  <option value="list-33">Obecné novinky</option>
+                </select>
+              </div>
+
+              <!--
+                ====================================================================
+                32 formulářů níže. Zobrazí se pouze ten, jehož data-list odpovídá
+                vybrané hodnotě v <select> výše. Do každého action="" vložte URL
+                z Ecomailu (Kontakty → seznam → Formuláře → adresa pro POST).
+                Pole "name" (jméno), "surname" (příjmení) a "email" jsou napojena
+                na merge tagy Ecomailu – neměňte jejich name atributy, jen texty
+                popisků/placeholders.
+                ====================================================================
+              -->
+              <form class="newsletter-form" data-list="list-01" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/33/ba894345e1ad230b0367f733c615e75b" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-01">Jméno</label>
+                    <input id="name-01" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-01">Příjmení</label>
+                    <input id="surname-01" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-01">E-mail</label>
+                    <input id="email-01" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-02" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/32/eb4f04e599563c6a94dfdab6da7d79a2" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-02">Jméno</label>
+                    <input id="name-02" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-02">Příjmení</label>
+                    <input id="surname-02" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-02">E-mail</label>
+                    <input id="email-02" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-03" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/31/d06aafc5a31e5227c3d52534fd9d0c96" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-03">Jméno</label>
+                    <input id="name-03" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-03">Příjmení</label>
+                    <input id="surname-03" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-03">E-mail</label>
+                    <input id="email-03" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-04" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/30/788b0fbc29ef6fe2ae4151a49b4d0133" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-04">Jméno</label>
+                    <input id="name-04" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-04">Příjmení</label>
+                    <input id="surname-04" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-04">E-mail</label>
+                    <input id="email-04" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-05" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/29/ea5d95a573043e2a42f500037466a078" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-05">Jméno</label>
+                    <input id="name-05" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-05">Příjmení</label>
+                    <input id="surname-05" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-05">E-mail</label>
+                    <input id="email-05" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-06" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/28/39bb2b27b44eb2eb5260d9063d0dc405" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-06">Jméno</label>
+                    <input id="name-06" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-06">Příjmení</label>
+                    <input id="surname-06" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-06">E-mail</label>
+                    <input id="email-06" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-07" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/27/60744de1ec48dba50beb28572ee25636" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-07">Jméno</label>
+                    <input id="name-07" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-07">Příjmení</label>
+                    <input id="surname-07" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-07">E-mail</label>
+                    <input id="email-07" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-08" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/26/397708fee48b1f1678a8c04cc142604a" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-08">Jméno</label>
+                    <input id="name-08" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-08">Příjmení</label>
+                    <input id="surname-08" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-08">E-mail</label>
+                    <input id="email-08" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-09" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/25/f17c94ba9f7a7a06b025a1afaaca6e6a" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-09">Jméno</label>
+                    <input id="name-09" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-09">Příjmení</label>
+                    <input id="surname-09" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-09">E-mail</label>
+                    <input id="email-09" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-10" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/24/68ad80a8296783256b609ecdeff8aa3e" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-10">Jméno</label>
+                    <input id="name-10" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-10">Příjmení</label>
+                    <input id="surname-10" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-10">E-mail</label>
+                    <input id="email-10" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-11" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/23/b8218829472e44c561b6577632796e64" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-11">Jméno</label>
+                    <input id="name-11" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-11">Příjmení</label>
+                    <input id="surname-11" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-11">E-mail</label>
+                    <input id="email-11" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-12" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/22/b6cffcc9a5bfa7e25701b93290a48d80" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-12">Jméno</label>
+                    <input id="name-12" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-12">Příjmení</label>
+                    <input id="surname-12" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-12">E-mail</label>
+                    <input id="email-12" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-13" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/21/125ab233e4603d4d7c84f5cbf8130258" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-13">Jméno</label>
+                    <input id="name-13" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-13">Příjmení</label>
+                    <input id="surname-13" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-13">E-mail</label>
+                    <input id="email-13" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-14" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/20/85f7dba955e715936a175d446bc6f115" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-14">Jméno</label>
+                    <input id="name-14" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-14">Příjmení</label>
+                    <input id="surname-14" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-14">E-mail</label>
+                    <input id="email-14" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-15" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/19/4abfdf42e682f87cd40907d9a0cd4e16" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-15">Jméno</label>
+                    <input id="name-15" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-15">Příjmení</label>
+                    <input id="surname-15" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-15">E-mail</label>
+                    <input id="email-15" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-16" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/18/eeb96ecd8eefc15f2198246e728510f1" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-16">Jméno</label>
+                    <input id="name-16" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-16">Příjmení</label>
+                    <input id="surname-16" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-16">E-mail</label>
+                    <input id="email-16" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-17" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/17/5a4345e2cfc20db946d8662a976213f2" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-17">Jméno</label>
+                    <input id="name-17" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-17">Příjmení</label>
+                    <input id="surname-17" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-17">E-mail</label>
+                    <input id="email-17" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-18" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/16/008646c414ce6adc8637fedebcbf087a" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-18">Jméno</label>
+                    <input id="name-18" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-18">Příjmení</label>
+                    <input id="surname-18" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-18">E-mail</label>
+                    <input id="email-18" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-19" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/15/864b4f4872272bdd94aadbc81dfd8b18" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-19">Jméno</label>
+                    <input id="name-19" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-19">Příjmení</label>
+                    <input id="surname-19" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-19">E-mail</label>
+                    <input id="email-19" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-20" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/14/6094cedc595ae47c2d7e76e9362bf8d4" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-20">Jméno</label>
+                    <input id="name-20" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-20">Příjmení</label>
+                    <input id="surname-20" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-20">E-mail</label>
+                    <input id="email-20" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-21" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/13/fd74319c464c247b7c0305bfc329d4f0" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-21">Jméno</label>
+                    <input id="name-21" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-21">Příjmení</label>
+                    <input id="surname-21" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-21">E-mail</label>
+                    <input id="email-21" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-22" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/12/04d9c95424b2f28aaece6f953bb0e4aa" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-22">Jméno</label>
+                    <input id="name-22" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-22">Příjmení</label>
+                    <input id="surname-22" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-22">E-mail</label>
+                    <input id="email-22" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-23" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/11/5e98f8ef6dfe00cb568981584ec149e7" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-23">Jméno</label>
+                    <input id="name-23" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-23">Příjmení</label>
+                    <input id="surname-23" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-23">E-mail</label>
+                    <input id="email-23" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-24" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/10/b87b958d61baa85a6fa011ee4e3a4f75" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-24">Jméno</label>
+                    <input id="name-24" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-24">Příjmení</label>
+                    <input id="surname-24" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-24">E-mail</label>
+                    <input id="email-24" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-25" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/9/54057be166928eb6fcc57504dc847797" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-25">Jméno</label>
+                    <input id="name-25" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-25">Příjmení</label>
+                    <input id="surname-25" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-25">E-mail</label>
+                    <input id="email-25" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-26" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/8/0ff8f206695a872edfb6fade7b6458ba" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-26">Jméno</label>
+                    <input id="name-26" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-26">Příjmení</label>
+                    <input id="surname-26" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-26">E-mail</label>
+                    <input id="email-26" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-27" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/7/c01458c4e85a58f0047857fac06ae283" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-27">Jméno</label>
+                    <input id="name-27" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-27">Příjmení</label>
+                    <input id="surname-27" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-27">E-mail</label>
+                    <input id="email-27" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-28" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/6/3fdfd544852ed7431aa64f3b9481afb9" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-28">Jméno</label>
+                    <input id="name-28" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-28">Příjmení</label>
+                    <input id="surname-28" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-28">E-mail</label>
+                    <input id="email-28" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-29" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/5/ed07fd6b07ff0199fabc8509f995f058" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-29">Jméno</label>
+                    <input id="name-29" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-29">Příjmení</label>
+                    <input id="surname-29" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-29">E-mail</label>
+                    <input id="email-29" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-30" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/4/f67e22c6c3dacfc9b77b6b40399abc16" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-30">Jméno</label>
+                    <input id="name-30" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-30">Příjmení</label>
+                    <input id="surname-30" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-30">E-mail</label>
+                    <input id="email-30" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-31" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/3/b6fcc542fb021c84fdaff536dd0a74a1" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-31">Jméno</label>
+                    <input id="name-31" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-31">Příjmení</label>
+                    <input id="surname-31" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-31">E-mail</label>
+                    <input id="email-31" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-32" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/2/2bb287d15897fe2f9d89c882af9a3a8b" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-32">Jméno</label>
+                    <input id="name-32" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-32">Příjmení</label>
+                    <input id="surname-32" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-32">E-mail</label>
+                    <input id="email-32" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+              <form class="newsletter-form" data-list="list-33" method="post" action="https://dominoproject.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088" hidden>
+                <div class="newsletter-form__grid">
+                  <div class="newsletter-field">
+                    <label for="name-33">Jméno</label>
+                    <input id="name-33" type="text" name="name" placeholder="Jméno" autocomplete="given-name">
+                  </div>
+                  <div class="newsletter-field">
+                    <label for="surname-33">Příjmení</label>
+                    <input id="surname-33" type="text" name="surname" placeholder="Příjmení" autocomplete="family-name">
+                  </div>
+                  <div class="newsletter-field newsletter-field--email">
+                    <label for="email-33">E-mail</label>
+                    <input id="email-33" type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
+                  </div>
+                  <button class="button button--primary newsletter-submit" type="submit">Přihlásit se</button>
+                </div>
+              </form>
+
+              <p class="newsletter-empty-hint" data-newsletter-hint>Nejprve vyberte možnost výše.</p>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-container site-footer__inner">
+        <p>Copyright © <span data-current-year>2026</span> DOMINO. Všechna práva vyhrazena.</p>
+        <a href="zasady.html">Zásady zpracování osobních údajů</a>
       </div>
-      <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/dtheatmain.jpg)">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="header-text" id="header-0">
-                  <h2>Domino <em>theatre</em></h2>
-                  <div class="div-dec"></div>
-                  <p id="header-text-color">Tento amatérský divadelní soubor navštěvují děti (od 5 let), žáci základních
-                    škol, studenti středních škol i vysokoškoláci. Členové se pod odborným vedením učí herecké průpravě
-                    a technice jevištního projevu. Divadelní inscenace jsou studovány v anglickém jazyce.</p>
-                  <div class="buttons">
-                    <div class="green-button">
-                      <a href="./domino-theater">Zjistit víc</a>
-                    </div>
-                    <div class="orange-button">
-                      <a href="./kontakty">Kontakt</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-button-next swiper-button-white"></div>
-    <div class="swiper-button-prev swiper-button-white"></div>
+    </footer>
   </div>
 
-  <!-- ***** Main Banner Area End ***** -->
-
-
-  <!-- <section class="simple-cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <h4>Business <em>Solutions</em> and <strong>Crypto</strong> Investments</h4>
-        </div>
-        <div class="col-lg-7">
-          <div class="buttons">
-            <div class="green-button">
-              <a href="#">Discover More</a>
-            </div>
-            <div class="orange-button">
-              <a href="#">Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-  <section class="about-us" id="about">
-    <div class="container">
-      <div class="section-heading">
-        <h6>O nás</h6>
-        <h4>Naše mise a hodnoty</h4>
-      </div>
-      <div class="about-content">
-        <p>Členové se pod odborným vedením učí a zdokonalují nejen své znalosti angličtiny. Práce probíhá vždy pod
-          vedením kvalifikovaných lektorů, v oblasti výuky angličtiny se žáci nezřídka setkávají s rodilými mluvčími.
-          Dlouhodobé projekty mohou být přímo řízené výchovně-vzdělávací institucí v zahraničí. Jsou medializovány a
-          prezentovány rodičovské veřejnosti zúčastněných žáků a studentů.</p>
-        <div class="more-button">
-          <a href="./domino-project">Domino project</a>
-          <a href="./domino-theater">Domino theatre</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="our-projects">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="project-card">
-            <img src="assets/images/dprojectlogo.svg" alt="Domino project">
-            <h4>Domino Project</h4>
-            <p>Domino Project nabízí výukové projekty s uplatněním mezipředmětových vztahů pro žáky mateřských,
-              základních a středních škol.</p>
-            <div class="action-button">
-              <a href="./domino-project">Zjistit víc</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="project-card">
-            <img src="assets/images/dtheaterlogo.svg" alt="Domino theater">
-            <h4>Domino Theater</h4>
-            <p>Amatérský divadelní soubor navštěvovaný dětmi (od 5 let), žáky základních škol, studenty středních škol i
-              vysokoškoláky.</p>
-            <div class="action-button">
-              <a href="./domino-theater">Zjistit víc</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-us" id="about">
-    <div class="container">
-      <div class="section-heading">
-        <h6>Newsletter</h6>
-        <h4>Přihlašte se k odběru novinek</h4>
-      </div>
-      <script>
-        (function (w, d, s, o, f, js, fjs) {
-          w['ecm-widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-          js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-          js.id = '3-b6fcc542fb021c84fdaff536dd0a74a1'; js.dataset.a = 'dominoproject'; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-        }(window, document, 'script', 'ecmwidget', 'https://d70shl7vidtft.cloudfront.net/widget.js'));
-      </script>
-      <div id="f-3-b6fcc542fb021c84fdaff536dd0a74a1"></div>
-    <p align="center"><a href="./zasady">Zásady zpracování osobních údajů</a></p>
-    </div>
-  </section>
-
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h6>Recenze</h6>
-            <h4>Co o nás říkají</h4>
-          </div>
-        </div>
-        <div class="col-lg-10 offset-lg-1">
-          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>Hra se mi celkově líbila, jen při některých scénách mi šel mráz po zádech. Líbily se mi i kulisy,
-                světla, nemluvě o hudbě. Herci měli hru perfektně nacvičenou. Anglická výslovnost mě překvapila, herci
-                krásně vyslovovali i s citem, který se do scény parádně hodil. Celkově bych hru ohodnotila 9/10. Ráda
-                bych se zúčastnila dalšího představení příští rok.</p>
-              <h4>Veronika Šolcová</h4>
-              <span>Divadelní představení v angličtině - Lord of the Flies</span>
-              <div class="right-image">
-                <img src="assets/images/user1.png" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>Divadlo bylo krásné, herci to dobře zahráli. Ale byla jsem trochu zklamaná, že na konci to dvě děti
-                nepřežily :(. Ale jinak, já jsem spokojená, někdy jsem se i trochu bála. Naopak, smála jsem se, když
-                rozbili tu sádrovou lasturu :), a pak jak si to museli uklízet.</p>
-              <h4>Tereza Božková</h4>
-              <span>Divadelní představení v angličtině - Lord of the Flies</span>
-              <div class="right-image">
-                <img src="assets/images/user1.png" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>Představení se mi líbilo hlavně díky zpracování a srozumitelnosti angličtiny.</p>
-              <h4>Jan Chalupecký</h4>
-              <span>Divadelní představení v angličtině - Lord of the Flies</span>
-              <div class="right-image">
-                <img src="assets/images/user1.png" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>Divadlo se mi líbilo, srozumitelnost byla dobrá. Klidně bych měla zájem jít v dalších letech na další
-                vystoupení.</p>
-              <h4>Lucie Orlitová</h4>
-              <span>Divadelní představení v angličtině - Lord of the Flies</span>
-              <div class="right-image">
-                <img src="assets/images/user1.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena. </p>
-          <li><a href="./zasady">Zásady zpracování osobních údajů</a></li>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/swiper.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/site.js" defer></script>
   <script>
-    var interleaveOffset = 0.5;
+    (function () {
+      var select = document.getElementById('newsletter-list-select');
+      var forms = document.querySelectorAll('.newsletter-form[data-list]');
+      var hint = document.querySelector('[data-newsletter-hint]');
+      if (!select) return;
 
-    var swiperOptions = {
-      loop: true,
-      speed: 1000,
-      grabCursor: true,
-      watchSlidesProgress: true,
-      mousewheelControl: true,
-      keyboardControl: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      on: {
-        progress: function () {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            var slideProgress = swiper.slides[i].progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".slide-inner").style.transform =
-              "translate3d(" + innerTranslate + "px, 0, 0)";
-          }
-        },
-        touchStart: function () {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = "";
-          }
-        },
-        setTransition: function (speed) {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".slide-inner").style.transition =
-              speed + "ms";
-          }
-        }
-      }
-    };
-
-    var swiper = new Swiper(".swiper-container", swiperOptions);
+      select.addEventListener('change', function () {
+        var chosen = select.value;
+        forms.forEach(function (form) {
+          form.hidden = form.getAttribute('data-list') !== chosen;
+        });
+        if (hint) hint.hidden = !!chosen;
+      });
+    })();
   </script>
 </body>
-
 </html>

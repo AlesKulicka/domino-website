@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <title>Domino Project z.s. - Domino project</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/domino-project.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zásady zpracování osobních údajů spolku Domino Project z.s.">
+  <meta name="theme-color" content="#171c31">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Zásady zpracování osobních údajů | Domino Project z.s.</title>
 </head>
-
 <body>
-  <div class="wrapper">
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <a href="./" class="logo">
-                <h1 class="logo" id="logo-text">DOMINO</h1>
-              </a>
-              <ul class="nav">
-                <li class="scroll-to-section"><a href="./">Domů</a></li>
-                <li class="has-sub">
-                  <a href="javascript:void(0)">Naše projekty</a>
-                  <ul class="sub-menu">
-                    <li><a href="./domino-project">Domino project</a></li>
-                    <li><a href="./domino-theater">Domino Theatre</a></li>
-                  </ul>
-                </li>
-                <li><a href="./akce">Akce</a></li>
-                <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
-                <li></li>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html" aria-label="Domino – domovská stránka">DOMINO</a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="visually-hidden">Otevřít navigaci</span>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="main-navigation" aria-label="Hlavní navigace">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Domů</a></li>
+            <li class="site-nav__projects">
+              <button class="submenu-toggle" type="button" aria-expanded="false">Naše projekty</button>
+              <ul class="site-nav__submenu">
+                <li><a href="domino-project.html">Domino Project</a></li>
+                <li><a href="domino-theater.html">Domino Theatre</a></li>
               </ul>
-              <a class='menu-trigger'>
-                <span>Menu</span>
-              </a>
-            </nav>
-          </div>
-        </div>
+            </li>
+            <li><a href="akce.html">Akce</a></li>
+            <li><a class="site-nav__contact" href="kontakty.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Main Content Start ***** -->
-    <section id="domino-theater">
-      <div class="container">
-        <div class="section-heading">
-          <h4>Zásady zpracování osobních údajů</h4>
-           <p></p>
-<!--             <iframe src="https://drive.google.com/file/d/191CpdZ6QnXqCcEliF5lrJUmztvjbBvMd/preview" width="1080" height="1080" allow="autoplay"></iframe>    -->
-           <p>Něco se nepovedlo :(</p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ***** Main Content End ***** -->
-
-    <!-- ***** Footer Start ***** -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena!</p>
-            <li><a href="#">Zásady zpracování osobních údajů</a></li>
+    <main id="main-content">
+      <section class="page-hero page-hero--privacy">
+        <div class="page-hero__content">
+          <div class="content-container">
+            <div class="page-hero__copy">
+              <p class="eyebrow">Dokumenty</p>
+              <h1>Zásady zpracování osobních údajů</h1>
+              <p>Informace o tom, jak Domino Project z.s. pracuje s osobními údaji.</p>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="content-container">
+          <div class="privacy-panel">
+            <div class="privacy-panel__actions">
+              <p>Dokument si můžete přečíst přímo na stránce, otevřít v nové záložce nebo stáhnout do zařízení.</p>
+              <div class="button-row">
+                <a class="button button--primary" href="zasady-zpracovani-osobnich-udaju.pdf" target="_blank" rel="noopener noreferrer">Otevřít PDF</a>
+                <a class="button button--secondary" href="zasady-zpracovani-osobnich-udaju.pdf" download>Stáhnout PDF</a>
+              </div>
+            </div>
+
+            <object class="privacy-document" data="nenezasady-zpracovani-osobnich-udaju.pdf" type="application/pdf">
+              <div class="privacy-fallback">
+                <h2>Omlouváme se, dokument se v prohlížeči nezobrazil</h2>
+                <p>PDF můžete otevřít nebo stáhnout pomocí tlačítek nad tímto textem.</p>
+              </div>
+            </object>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-container site-footer__inner">
+        <p>Copyright © <span data-current-year>2026</span> DOMINO. Všechna práva vyhrazena.</p>
+        <a href="zasady.html" aria-current="page">Zásady zpracování osobních údajů</a>
       </div>
     </footer>
-    <!-- ***** Footer End ***** -->
   </div>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/swiper.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
-
 </html>

@@ -1,147 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="cs">
 <head>
-  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-  <title>Domino Project z.s.</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/contact.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kontaktní údaje a adresa spolku Domino Project v Brně-Jundrově.">
+  <meta name="theme-color" content="#171c31">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Kontakt | Domino Project z.s.</title>
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html" aria-label="Domino – domovská stránka">DOMINO</a>
 
-  <div class="wrapper">
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <a href="./" class="logo">
-                <h1 class="logo" id="logo-text">DOMINO</h1>
-              </a>
-              <ul class="nav">
-                <li class="scroll-to-section"><a href="./">Domů</a></li>
-                <li class="has-sub">
-                  <a href="javascript:void(0)">Naše projekty</a>
-                  <ul class="sub-menu">
-                    <li><a href="./domino-project">Domino project</a></li>
-                    <li><a href="./domino-theater">Domino theater</a></li>
-                  </ul>
-                </li>
-                <li><a href="./akce">Akce</a></li>
-                <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
-                <li></li>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="visually-hidden">Otevřít navigaci</span>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="main-navigation" aria-label="Hlavní navigace">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Domů</a></li>
+            <li class="site-nav__projects">
+              <button class="submenu-toggle" type="button" aria-expanded="false">Naše projekty</button>
+              <ul class="site-nav__submenu">
+                <li><a href="domino-project.html">Domino Project</a></li>
+                <li><a href="domino-theater.html">Domino Theatre</a></li>
               </ul>
-              <a class='menu-trigger'>
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-            </nav>
-          </div>
-        </div>
+            </li>
+            <li><a href="akce.html">Akce</a></li>
+            <li><a class="site-nav__contact is-active" href="kontakty.html" aria-current="page">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
-    <!-- <div class="page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="header-text">
-            <h2>Contact Us</h2>
-            <div class="div-dec"></div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    </div> -->
-
-    <!-- ***** Main Banner Area End ***** -->
-
-    <section class="map">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div id="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d947.881565540292!2d16.551977828112612!3d49.21173199150626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129699d6e2d63b%3A0xadde25cdd7fcb9c1!2sOpt%C3%A1tova%20708%2F37%2C%20637%2000%20Brno-Jundrov!5e1!3m2!1scs!2scz!4v1722443503008!5m2!1scs!2scz"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-          <div class="col-lg-10 offset-lg-1">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="info-item">
-                  <i class="fa fa-envelope"></i>
-                  <h4>Email</h4>
-                  <a href="mailto: nikatheater@centrum.cz">nikatheater@centrum.cz</a>
-                  <a href="mailto: michaelatheater@hotmail.com">michaelatheater@hotmail.com</a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="info-item">
-                  <i class="fa fa-phone"></i>
-                  <h4>Telefon</h4>
-                  <a href="tel:+420604486386">Mgr. Nika Štěpánková +420 604 486 386</a><br>
-                  <a href="tel:+420774744434">Mgr. Michaela Linhartová +420 774 744 434</a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="info-item">
-                  <i class="fa fa-map-marked-alt"></i>
-                  <h4>Adresa</h4>
-                  <a href="#">Optátova 37
-                    Brno - Jundrov</a><br>
-                  <a href="#">637 00</a>
-                </div>
-              </div>
+    <main id="main-content">
+      <section class="page-hero page-hero--contact">
+        <div class="page-hero__content">
+          <div class="content-container">
+            <div class="page-hero__copy">
+              <p class="eyebrow">Jsme vám nablízku</p>
+              <h1>Kontakt</h1>
+              <p>Ozvěte se nám, máte-li jakýkoliv dotaz, například ohledně představení, programu pro školu nebo členství v souboru. Moc rádi Vám odpovíme.</p>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="contact-details-title">
+        <div class="content-container">
+          <h2 class="visually-hidden" id="contact-details-title">Kontaktní údaje</h2>
+          <div class="contact-cards">
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">@</span>
+              <h2>E-mail</h2>
+              <a href="mailto:nikatheater@centrum.cz">nikatheater@centrum.cz</a>
+              <a href="mailto:michaelatheater@hotmail.com">michaelatheater@hotmail.com</a>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">☎</span>
+              <h2>Telefon</h2>
+              <a href="tel:+420604486386">Mgr.&nbsp;Nika&nbsp;Štěpánková<br>+420&nbsp;604&nbsp;486&nbsp;386</a>
+              <a href="tel:+420774744434">Mgr.&nbsp;Michaela&nbsp;Linhartová<br>+420&nbsp;774&nbsp;744&nbsp;434</a>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-card__icon" aria-hidden="true">⌂</span>
+              <h2>Adresa spolku</h2>
+              <a href="https://www.google.com/maps/search/?api=1&query=Opt%C3%A1tova+37%2C+Brno-Jundrov" target="_blank" rel="noopener noreferrer">
+                Optátova 37<br>637 00 Brno-Jundrov
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="map-title">
+        <div class="content-container">
+          <header class="section-heading section-heading--left">
+            <p class="eyebrow">Kde nás najdete</p>
+            <h2 id="map-title">Zkušebna v Telnici u Brna</h2>
+            <p>Na adrese Hliníky 264 probíhají pravidelné divadelní zkoušky.</p>
+          </header>
+
+          <div class="contact-map">
+            <iframe
+              title="Mapa se zkušebnou Domino na adrese Hliníky 264, Telnice u Brna"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d554.613752048827!2d16.72850312427479!3d49.109572707847896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712c1f20b1a1b57%3A0xa9fafdf510fbfec4!2sHlin%C3%ADky%20264%2C%20664%2059%20Telnice%20u%20Brna!5e1!3m2!1scs!2scz!4v1786050484500!5m2!1scs!2scz"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="contact-note">Pokud se mapa nenačte, otevřete adresu přímo v mapové aplikaci pomocí odkazu v kontaktní kartě.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-container site-footer__inner">
+        <p>Copyright © <span data-current-year>2026</span> DOMINO. Všechna práva vyhrazena.</p>
+        <a href="zasady.html">Zásady zpracování osobních údajů</a>
       </div>
-    </section>
+    </footer>
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena!</p>
-          <li><a href="./zasady">Zásady zpracování osobních údajů</a></li>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/swiper.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-
+  <script src="assets/js/site.js" defer></script>
 </body>
-
 </html>

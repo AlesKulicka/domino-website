@@ -1,175 +1,138 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <title>Domino Project z.s. - Domino project</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/domino-project.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interaktivní výukové a divadelní projekty Domino Project pro mateřské, základní a střední školy.">
+  <meta name="theme-color" content="#171c31">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Domino Project | Výukové projekty pro školy</title>
 </head>
-
 <body>
-  <div class="wrapper">
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <a href="./" class="logo">
-                <h1 class="logo" id="logo-text">DOMINO</h1>
-              </a>
-              <ul class="nav">
-                <li class="scroll-to-section"><a href="./">Domů</a></li>
-                <li class="has-sub">
-                  <a href="javascript:void(0)" class="active">Naše projekty</a>
-                  <ul class="sub-menu">
-                    <li><a href="./domino-project">Domino project</a></li>
-                    <li><a href="./domino-theater">Domino Theatre</a></li>
-                  </ul>
-                </li>
-                <li><a href="./akce">Akce</a></li>
-                <li class="kontakt" id="kontakt"><a href="./kontakty">Kontakt</a></li>
-                <li></li>
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html" aria-label="Domino – domovská stránka">DOMINO</a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="visually-hidden">Otevřít navigaci</span>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="main-navigation" aria-label="Hlavní navigace">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Domů</a></li>
+            <li class="site-nav__projects">
+              <button class="submenu-toggle is-active" type="button" aria-expanded="false">Naše projekty</button>
+              <ul class="site-nav__submenu">
+                <li><a class="is-active" href="domino-project.html" aria-current="page">Domino Project</a></li>
+                <li><a href="domino-theater.html">Domino Theatre</a></li>
               </ul>
-              <a class='menu-trigger'>
-                <span>Menu</span>
-              </a>
-            </nav>
-          </div>
-        </div>
+            </li>
+            <li><a href="akce.html">Akce</a></li>
+            <li><a class="site-nav__contact" href="kontakty.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Main Content Start ***** -->
-    <section id="domino-theater">
-      <div class="container">
-        <div class="section-heading">
-          <h4>Domino Project</h4>
-          <p>DOMINO PROJECT z.s. je zapsaný spolek, Registrován u Krajského soudu v Brně, Číslo a datum zápisu: L11745
-            1. 1. 2014. Transformoval se z původního občanského sdružení registrovaného u Ministerstva vnitra dne 24.
-            dubna 2006 pod č.j. VS/1-1/63 993/06-R. Je podporován Statutárním městem Brnem. Předsedkyní spolku je Mgr.
-            Nika Štěpánková absolventka Střední pedagogické školy v Brně (obor učitelství mateřských škol) a Pedagogické
-            fakulty MU v Brně (obor český jazyk a hudební výchova) pedagogická praxe: mateřská škola, Dům dětí a mládeže
-            – oddělení estetiky, Základní umělecká škola – literárně-dramatický obor, Soukromé hudebně-dramatické
-            studio, zřizovatelka a ředitelka Soukromé mateřské a základní školy v Brně a současně autorka
-            výchovně-vzdělávací koncepce založené na principu dramatické výchovyautorka výukových projektů metodou
-            dramatické výchovy (specializace na angličtinu, hudební, výtvarnou a literární výchovu) – mateřské až
-            střední školy realizace mezinárodních projektů dramatické výchovy a kulturní výměny (Velká Británie,
-            Německo)zakladatelka a vedoucí divadelního souboru Domino Theater (Brno), režisérka, scenáristka a herečka,
-            držitelka mnoha ocenění z divadelních festivalů (např. Jiráskův Hronov, Loutkářská Chrudim, Vyškovské
-            slunce, Festival ZUŠ LDO Most, Grenzenlos Reichenbach – SRN, 3. evropský divadelní festival studentů
-            středních škol – Marseille, Francie)</p>
-        </div>
-
-        <div class="section-heading">
-          <h6 id="nabizime">Nabízíme</h6>
-          <p>Domino Project nabízí interaktivní výukové projekty s uplatněním mezipředmětových vztahů pro žáky z
-            mateřských, základních a středních škol. Dlouhodobé projekty směřují k navázání kontaktu vybrané školy se
-            zahraniční školou a k tvůrčí partnerské spolupráci dětí odlišných zemí. Práce probíhá vždy pod vedením
-            kvalifikovaných lektorů, v oblasti výuky angličtiny se žáci nezřídka setkávají s rodilými mluvčími.
-            Dlouhodobé projekty mohou být přímo řízené výchovně-vzdělávací institucí v zahraničí. Jsou medializovány a
-            prezentovány rodičovské veřejnosti zúčastněných žáků a studentů.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Základní školy</h5>
-                <p class="card-text">Domino Project nabízí interaktivní drama workshop pro začátečníky a mírně pokročilé
-                  žáky z 1. stupně ZŠ přímo do třídy školy divadelní představení v angličtině pro mírně pokročilé žáky i
-                  pro žáky druhého stupně ZŠ dle aktuální nabídky.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Střední školy</h5>
-                <p class="card-text">Domino Project nabízí pro studenty středních škol divadelní představení v
-                  angličtině; čtyřdenní intenzivní drama workshop zaměřený na vytvoření anglické divadelní inscenace.
-                  Workshop je veden odborným jazykovým lektorem a uměleckým vedoucím (režisérem). Součástí projektu je
-                  prezentace představení pro diváky. Největším přínosem tohoto projektu je skutečnost, že studenti hrají
-                  pro studenty. Diváci i herci jsou si věkově i mentálně blízcí, což nabízí velké množství příjemných a
-                  netradičních okamžiků během přípravy i průběhu daných divadelních představení. Tímto aktivním
-                  přístupem studentů v roli herců, ale i žáků a studentů v roli diváků chce Domino Project motivovat
-                  mladou generaci k výuce angličtiny. Netradiční metoda drama performance je u dětí a studentů velmi
-                  oblíbená. Před každým přestavením obdrží vyučující anglický scénář divadelní hry, popř. další
-                  didaktický materiál, který slouží k přípravě studentů na představení a k následnému procvičování či
-                  tematickému zaměření vyučovacích hodin.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Mateřské školy</h5>
-                <p class="card-text">Šedesátiminutové výukové projekty jsou organizovány přímo v herně dané mateřské
-                  školy. Základem je interaktivní divadelní představení, které využívá prvky tvořivé dramatiky. Na něj
-                  navazuje výtvarná dílna, která téma zpracovává do konkrétního výtvarného výtvoru. Závěrečná část
-                  uzavře celý výukový projekt hudebně nebo pohybově a zhodnotí práci dětí. Projekt je vhodný pro všechny
-                  věkové kategorie dětí z mateřské školy, maximální kapacita je 80 dětí. V případě, že má daná mateřská
-                  škola více dětí, je možné udělat dvě po sobě jdoucí představení. Celá řada výukových projektů sloužila
-                  jako ukázkové projekty pro praxi studentů JAMU z katedry dramatické výchovy.</p>
-              </div>
+    <main id="main-content">
+      <section class="page-hero page-hero--project">
+        <div class="page-hero__content">
+          <div class="content-container">
+            <div class="page-hero__copy">
+              <p class="eyebrow">Výuka zážitkem</p>
+              <h1>Domino Project</h1>
+              <p>Interaktivní výukové projekty, které propojují jazyky, divadlo a spolupráci napříč školními předměty.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="akce" class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="section-heading">
-              <h2>Naše nadcházející akce</h2>
-              <p>Budoucí i již proběhlá představení, workshopy i jiné akce.</p>
-              <a href="./akce" class="btn btn-primary mt-4">Zjistit více o akcích</a>
+      <section class="section" aria-labelledby="about-project-title">
+        <div class="content-container about-grid">
+          <article class="prose">
+            <p class="eyebrow">O spolku</p>
+            <h2 id="about-project-title">Vzdělávání, které děti aktivně zapojuje</h2>
+            <p>
+              DOMINO PROJECT z.s. je zapsaný spolek registrovaný u Krajského soudu v Brně pod spisovou značkou L 11745 od 1. ledna 2014. Navazuje na původní občanské sdružení registrované Ministerstvem vnitra 24. dubna 2006 a je podporován statutárním městem Brnem.
+            </p>
+            <p>
+              Předsedkyní spolku je Mgr. Nika Štěpánková, absolventka Střední pedagogické školy v Brně a Pedagogické fakulty Masarykovy univerzity v oborech český jazyk a hudební výchova.
+            </p>
+            <p>
+              Ve své pedagogické i umělecké praxi působila v mateřské škole, domě dětí a mládeže, základní umělecké škole i soukromém hudebně-dramatickém studiu. Je autorkou výukových projektů metodou dramatické výchovy, zakladatelkou a vedoucí souboru Domino Theatre, režisérkou, scenáristkou a herečkou.
+            </p>
+          </article>
+
+          <aside class="fact-card" aria-labelledby="project-facts-title">
+            <h2 id="project-facts-title">Základní informace</h2>
+            <ul class="fact-list">
+              <li><strong>Sídlo činnosti</strong><span>Telnice u Brna</span></li>
+              <li><strong>Vznik spolku</strong><span>1. ledna 2014</span></li>
+              <li><strong>Tradice činnosti</strong><span>od roku 2006</span></li>
+              <li><strong>Předsedkyně</strong><span>Mgr. Nika Štěpánková</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--surface" id="nabizime" aria-labelledby="offer-title">
+        <div class="content-container">
+          <header class="section-heading">
+            <p class="eyebrow">Nabízíme</p>
+            <h2 id="offer-title">Programy pro jednotlivé stupně škol</h2>
+            <p>Formát i jazykovou náročnost přizpůsobujeme věku a zkušenostem účastníků.</p>
+          </header>
+
+          <div class="offer-grid">
+            <article class="offer-card" data-number="01">
+              <h3>Mateřské školy</h3>
+              <p>
+                Šedesátiminutový projekt probíhá přímo v herně mateřské školy. Interaktivní divadelní představení s prvky tvořivé dramatiky doplňuje výtvarná dílna a závěrečná hudební nebo pohybová část. Program je vhodný pro všechny věkové skupiny do maximální kapacity 80 dětí.
+              </p>
+            </article>
+
+            <!--<article class="offer-card" data-number="02">
+              <h3>Základní školy</h3>
+              <p>
+                Pro první stupeň nabízíme interaktivní drama workshop v angličtině přímo ve třídě. Pro mírně pokročilé žáky prvního i druhého stupně připravujeme také divadelní představení v angličtině podle aktuální nabídky.
+              </p>
+            </article>-->
+
+            <article class="offer-card" data-number="02">
+              <h3>Střední školy</h3>
+              <p>
+                Studenti mohou navštívit anglické divadelní představení nebo absolvovat čtyřdenní intenzivní drama workshop zakončený vlastní inscenací. Projekt vede jazykový lektor společně s režisérem a vyučující předem získají scénář i navazující didaktické materiály.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="content-container">
+          <div class="cta-panel">
+            <div>
+              <h2>Podívejte se na aktuální představení</h2>
+              <p>V programu najdete připravované akce i archiv dřívějších inscenací.</p>
             </div>
+            <a class="button button--primary" href="akce.html">Zobrazit program</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-
-    <!-- ***** Main Content End ***** -->
-
-    <!-- ***** Footer Start ***** -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright © 2025 DOMINO. Všechna práva vyhrazena!</p>
-            <li><a href="./zasady">Zásady zpracování osobních údajů</a></li>
-          </div>
-        </div>
+    <footer class="site-footer">
+      <div class="content-container site-footer__inner">
+        <p>Copyright © <span data-current-year>2026</span> DOMINO. Všechna práva vyhrazena.</p>
+        <a href="zasady.html">Zásady zpracování osobních údajů</a>
       </div>
     </footer>
-    <!-- ***** Footer End ***** -->
   </div>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/swiper.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
-
 </html>

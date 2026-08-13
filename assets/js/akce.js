@@ -31,6 +31,8 @@
         summary: "První stupeň ZŠ",
         details: ["Název napovídá, že představení je adaptací slavného románu C. S. Lewise Lev, čarodějnice a skříň. V dospělých rolích uvidíte lektory Domino Project z.s. a dětské postavy ztvární členové Domino Theater, souboru který je sestaven z dětí základních škol a osmiletých gymnázií, kteří inscenaci nacvičili pod odborným jazykovým vedením."]
       },
+    ],
+    past: [
       {
         id: "my-family",
         title: "My Family and Other Animals",
@@ -57,13 +59,8 @@
         title: "Around the World with Mary Poppins",
         image: "assets/images/around_the_world.jpg",
         summary: "Hravé představení volně inspirované postavou Mary Poppins.",
-        details: [
-          "Hravé představení je volně inspirováno postavou Mary Poppins. Po boku slavné chůvy se děti postupně seznamují se zeměmi, kde se mluví anglicky.",
-          "Prvkem blízkým publiku je věk herců – kromě dospělé Mary totiž diváci na jevišti uvidí děti své věkové kategorie."
-        ]
+        details: ["Hravé představení je volně inspirováno postavou Mary Poppins. Po boku slavné chůvy se děti postupně seznamují se zeměmi, kde se mluví anglicky.", "Prvkem blízkým publiku je věk herců – kromě dospělé Mary totiž diváci na jevišti uvidí děti své věkové kategorie."]
       }
-    ],
-    past: [
       {
         id: "midsummer",
         title: "A Midsummer Night’s Dream",

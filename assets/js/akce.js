@@ -60,7 +60,7 @@
         image: "assets/images/around_the_world.jpg",
         summary: "Hravé představení volně inspirované postavou Mary Poppins.",
         details: ["Hravé představení je volně inspirováno postavou Mary Poppins. Po boku slavné chůvy se děti postupně seznamují se zeměmi, kde se mluví anglicky.", "Prvkem blízkým publiku je věk herců – kromě dospělé Mary totiž diváci na jevišti uvidí děti své věkové kategorie."]
-      }
+      },
       {
         id: "midsummer",
         title: "A Midsummer Night’s Dream",

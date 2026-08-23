@@ -4,6 +4,13 @@
   const eventGroups = {
     upcoming: [
       {
+        id: "siegfried-und-brunhlid",
+        title: "Siegfried und Brunhlid",
+        image: "assets/images/siegfried2026.jpeg",
+        summary: "SŠ + druhý stupeň ZŠ",
+        details: ["Představení proběhne ve spolupráci s brněnským divadelním souborem Domino Theater, diváky čeká ilustrované vyprávění bájného příběhu z cyklu legend o Nibelunzích. Vypravěč, který je zapojen do děje, provází diváky magickým příběhem odehrávajícím se na scéně. Produkce je určena divákům různých jazykových úrovní, představení je velmi vizuální a je koncipováno tak, aby děj pochopil i začátečník a bylo pro něj motivací k dalšímu studiu cizího jazyka. Pokročilejší studenti si budou moci otestovat své znalosti němčiny při poslechu mluveného projevu."]
+      },
+      {
         id: "lord-of-the-flies2",
         title: "Lord of the Flies",
         image: "assets/images/lordflies.jpg",
